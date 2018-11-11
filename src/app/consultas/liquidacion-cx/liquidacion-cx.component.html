@@ -1,0 +1,45 @@
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-3">
+
+      <mat-form-field>
+        <mat-select placeholder="Seleccione Manual">
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-md-3">
+
+      <mat-form-field>
+        <input [formControl]="autoCompleteControl" type="text" placeholder="Còdigo" aria-label="Number" matInput
+          [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let item of githubAutoComplete$ | async; let index = index" [value]="item.word">
+            {{ item.word | titlecase}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+    </div>
+    <div class="col-md-3">
+     <!--  <mat-form-field class="example-full-width">
+        <input type="text" placeholder="Descripciòn" aria-label="text" matInput [formControl]="myControl"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field> -->
+    </div>
+    <div class="col-md-3">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Porcentaje %" type="number" value="0">
+      </mat-form-field>
+    </div>
+
+  </div>
+
+</div>
