@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, from } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { Items, User } from '../class/interface';
+import { Items, GithubApi } from '../class/interface';
 import {AppConfiguration} from '../../../../config'
 
 
@@ -30,8 +30,12 @@ export class LiquidacionCxServiceService {
        return ELEMENT_DATA;
    }
    
-  getUser() {
-    return this.http.get<any[]>(this.serviceUrl);
+   getRepoIssues(sort: string, order: string, page: number): Observable<GithubApi> {
+    const href = 'https://api.github.com/search/issues';
+    const requestUrl =
+        `${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
+
+    return this.http.get<GithubApi>(requestUrl);
   }
 
   search(query: string): Observable<Items> {

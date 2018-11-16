@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { Items, User } from '../class/interface';
+import { Items, GithubApi } from '../class/interface';
 import { LiquidacionCxServiceService } from '../Service/liquidacion-cx-service.service';
-import { Observable, of, observable, merge } from 'rxjs';
+import { Observable, of, merge } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import {
   startWith,
@@ -11,10 +11,9 @@ import {
   catchError  
 } from 'rxjs/operators';
 import {MatPaginator, MatTableDataSource, MatSort} from '@angular/material';
-import {DataSource} from '@angular/cdk/collections';
 import { HttpClient } from '@angular/common/http';
 
-export interface Food {
+export interface Manual {
   value: string;
   viewValue: string;
 }
@@ -30,7 +29,7 @@ export class LiquidacionCxComponent implements OnInit, AfterViewInit {
   //displayedColumns = ['name', 'email'];
 
 
-  foods: Food[] = [
+  mans: Manual[] = [
     {value: 'M1', viewValue: 'Manual 1'},
     {value: 'M2', viewValue: 'Manual 2'},
 
@@ -82,7 +81,7 @@ export class LiquidacionCxComponent implements OnInit, AfterViewInit {
 
 
   ngAfterViewInit() {
-    this.exampleDatabase = new ExampleHttpDao(this.http);
+    this.exampleDatabase = new ExampleHttpDao(this.githubService);
 
     // If the user changes the sort order, reset back to the first page.
     this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
@@ -105,43 +104,12 @@ export class LiquidacionCxComponent implements OnInit, AfterViewInit {
         })        
       ).subscribe(data => this.dataSource.data = data);
   };
-
-
-
-}
-
-/* export class UserDataSource extends DataSource<any> {
-  constructor(private userService: LiquidacionCxServiceService) {
-    super();
-  }
-  connect(): Observable<User[]> {
-    return this.userService.getUser();
-  }
-  disconnect() {}
-} */
-
-
-export interface GithubApi {
-  items: GithubIssue[];
-  total_count: number;
-}
-
-export interface GithubIssue {
-  created_at: string;
-  number: string;
-  state: string;
-  title: string;
 }
 
 /** An example database that the data source uses to retrieve data for the table. */
 export class ExampleHttpDao {
-  constructor(private http: HttpClient) {}
-
-  getRepoIssues(sort: string, order: string, page: number): Observable<GithubApi> {
-    const href = 'https://api.github.com/search/issues';
-    const requestUrl =
-        `${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
-
-    return this.http.get<GithubApi>(requestUrl);
+  constructor( private githubService: LiquidacionCxServiceService) {}
+  getRepoIssues(sort: string, order: string, page: number): Observable<GithubApi> { 
+    return this.githubService.getRepoIssues(sort,order,page);
   }
 }

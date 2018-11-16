@@ -4,8 +4,8 @@
 
       <mat-form-field>
         <mat-select placeholder="Seleccione Manual">
-          <mat-option *ngFor="let food of foods" [value]="food.value">
-            {{food.viewValue}}
+          <mat-option *ngFor="let man of mans" [value]="man.value">
+            {{man.viewValue}}
           </mat-option>
         </mat-select>
       </mat-form-field>
@@ -43,13 +43,13 @@
   </div>
   <div class="row">
       <div class="example-container mat-elevation-z8">
-          <div class="example-loading-shade"
+        <!--   <div class="example-loading-shade"
                *ngIf="isLoadingResults || isRateLimitReached">
             <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
             <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
               GitHub's API rate limit has been reached. It will be reset in one minute.
             </div>
-          </div>
+          </div> -->
         
           <mat-table #table [dataSource]="dataSource" class="example-table"
                      matSort matSortActive="created" matSortDisableClear matSortDirection="asc">
