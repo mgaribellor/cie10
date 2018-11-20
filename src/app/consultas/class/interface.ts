@@ -23,8 +23,13 @@ export interface Item {
     score: number;
   }
 
-  export interface Items {
+ /*  export interface Items {
     score: number;
     word: string;    
+  }
+ */
+  export interface Items {
+    cod: string;
+    nom: string;    
   }
   
