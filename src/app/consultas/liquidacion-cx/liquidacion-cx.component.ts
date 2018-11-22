@@ -6,6 +6,7 @@ import { FormControl } from '@angular/forms';
 import {startWith,map,debounceTime,switchMap,catchError } from 'rxjs/operators';
 import {MatPaginator, MatTableDataSource, MatSort} from '@angular/material';
 import { HttpClient } from '@angular/common/http';
+import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-liquidacion-cx',
@@ -20,7 +21,7 @@ export class LiquidacionCxComponent implements OnInit, AfterViewInit {
     {value: 'M2', viewValue: 'Manual 2'},
   ];
 
-  displayedColumns = ['cod', 'nom','ane','ayu','cap','des','hom','mat','tot','uvr'];
+  displayedColumns = ['select','cod', 'nom','ane','ayu','cap','des','hom','mat','tot','uvr'];
 
    columns: Array<any> = [
     { name: 'position', label: 'No.' },
@@ -63,11 +64,6 @@ export class LiquidacionCxComponent implements OnInit, AfterViewInit {
   }
 
 
-  
-
-  resultsLength = 0;
-  isLoadingResults = false;
-  isRateLimitReached = false;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -77,6 +73,22 @@ export class LiquidacionCxComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
    
   };
+
+  selection = new SelectionModel<Items>(true, []);
+  
+  isAllSelected() {
+    const numSelected = this.selection.selected.length;
+    const numRows = this.dataSource.data.length;
+    return numSelected === numRows;
+  }
+
+  /** Selects all rows if they are not all selected; otherwise clear selection. */
+  masterToggle() {
+    this.isAllSelected() ?
+        this.selection.clear() :
+        this.dataSource.data.forEach(
+          row => this.selection.select(row[0]));
+  }
 
   public selectionChange(item) {  
      var item1 = item;
