@@ -14,7 +14,7 @@ import { SelectionModel } from '@angular/cdk/collections';
   styleUrls: ['./liquidacion-cx.component.scss']
 })
 
-export class LiquidacionCxComponent implements OnInit, AfterViewInit {
+export class LiquidacionCxComponent implements OnInit {
 
   mans: Manual[] = [
     {value: 'M1', viewValue: 'Manual 1'},
@@ -35,6 +35,7 @@ export class LiquidacionCxComponent implements OnInit, AfterViewInit {
   public githubAutoComplete$: Observable<Items> = null;
   public autoCompleteControl = new FormControl();
   private dataSource = new MatTableDataSource();
+  public showTable: boolean;
 
   constructor(private githubService: LiquidacionCxServiceService, private http: HttpClient) {}
 
@@ -49,6 +50,7 @@ export class LiquidacionCxComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    this.showTable = false;
     this.githubAutoComplete$ = this.autoCompleteControl.valueChanges.pipe(
       startWith(''),
       debounceTime(300),
@@ -63,16 +65,8 @@ export class LiquidacionCxComponent implements OnInit, AfterViewInit {
     );
   }
 
-
-
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-
-
-
-  ngAfterViewInit() {
-   
-  };
 
   selection = new SelectionModel<Items>(true, []);
   
@@ -87,16 +81,14 @@ export class LiquidacionCxComponent implements OnInit, AfterViewInit {
     this.isAllSelected() ?
         this.selection.clear() :
         this.dataSource.data.forEach(
-          row => this.selection.select(row[0]));
+          row => this.selection.select());
   }
 
   public selectionChange(item) {  
-     var item1 = item;
-
+    this.showTable = true;
     this.dataSource.data.push(item);
     this.dataSource.filter = ""; 
 
     }
-
 
 }

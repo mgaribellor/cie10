@@ -31,8 +31,8 @@
     </div>
 
   </div>
-  <div class="row">
-    <div class="mat-elevation-z8 responsive_table">
+  <div class="row" [hidden]="!showTable">
+    <div class="mat-elevation-z8 responsive_table example-container">
       <!--   <div class="example-loading-shade"
                *ngIf="isLoadingResults || isRateLimitReached">
             <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
@@ -107,7 +107,7 @@
           <mat-cell *matCellDef="let row">{{ row.uvr }}</mat-cell>
         </ng-container>
 
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>
 
