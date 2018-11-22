@@ -34,7 +34,7 @@ export class LiquidacionCxComponent implements OnInit {
   
   public githubAutoComplete$: Observable<Items> = null;
   public autoCompleteControl = new FormControl();
-  private dataSource = new MatTableDataSource();
+  public dataSource = new MatTableDataSource();
   public showTable: boolean;
 
   constructor(private githubService: LiquidacionCxServiceService, private http: HttpClient) {}
