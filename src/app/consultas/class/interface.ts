@@ -11,16 +11,29 @@ export interface GithubIssue {
 }
 
 
-  export interface Items {
+ /*  export interface Items {
     score: number;
     word: string;    
   }
   
-  export interface User {
-    name: string;
-    email: string;
-    phone: string;
-    company: {
-        name: string;
-    }
-}
+ */
+  export interface Items {
+    cod: string;
+    nom: string;   
+    ane : string;
+    ayu : string;
+    cap : string;
+    des : string;
+    hom : string;
+    mat : string; 
+    tot : string; 
+    uvr : string; 
+    nombre: string;
+   
+  }
+
+  export interface Manual {
+    value: string;
+    viewValue: string;
+  }
+  

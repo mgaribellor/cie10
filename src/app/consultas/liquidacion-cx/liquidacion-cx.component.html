@@ -10,30 +10,20 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-6">
 
-      <mat-form-field>
+      <mat-form-field class="example-full-width">
         <input [formControl]="autoCompleteControl" type="text" placeholder="Còdigo" aria-label="Number" matInput
           [matAutocomplete]="auto">
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-          <mat-option *ngFor="let item of githubAutoComplete$ | async; let index = index" [value]="item.word">
-            {{ item.word | titlecase}}
+          <mat-option *ngFor="let item of githubAutoComplete$ | async" [value]="item.nombre" (onSelectionChange)="selectionChange(item)">
+            {{ item.nombre | titlecase}}
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
 
     </div>
-    <div class="col-md-3">
-     <!--  <mat-form-field class="example-full-width">
-        <input type="text" placeholder="Descripciòn" aria-label="text" matInput [formControl]="myControl"
-          [matAutocomplete]="auto">
-        <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-            {{option}}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field> -->
-    </div>
+
     <div class="col-md-3">
       <mat-form-field class="example-full-width">
         <input matInput placeholder="Porcentaje %" type="number" value="0">
@@ -42,57 +32,74 @@
 
   </div>
   <div class="row">
-      <div class="example-container mat-elevation-z8">
-        <!--   <div class="example-loading-shade"
+    <div class="example-container mat-elevation-z8">
+      <!--   <div class="example-loading-shade"
                *ngIf="isLoadingResults || isRateLimitReached">
             <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
             <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
               GitHub's API rate limit has been reached. It will be reset in one minute.
             </div>
           </div> -->
-        
-          <mat-table #table [dataSource]="dataSource" class="example-table"
-                     matSort matSortActive="created" matSortDisableClear matSortDirection="asc">
-        
-            <!--- Note that these columns can be defined in any order.
-                  The actual rendered columns are set as a property on the row definition" -->
-        
-            <!-- Number Column -->
-            <ng-container matColumnDef="number">
-              <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
-              <mat-cell *matCellDef="let row">{{ row.number }}</mat-cell>
-            </ng-container>
-        
-            <!-- Title Column -->
-            <ng-container matColumnDef="title">
-              <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
-              <mat-cell *matCellDef="let row">{{ row.title }}</mat-cell>
-            </ng-container>
-        
-            <!-- State Column -->
-            <ng-container matColumnDef="state">
-              <mat-header-cell *matHeaderCellDef>State</mat-header-cell>
-              <mat-cell *matCellDef="let row">{{ row.state }}</mat-cell>
-            </ng-container>
-        
-            <!-- Created Column -->
-            <ng-container matColumnDef="created">
-              <mat-header-cell *matHeaderCellDef
-                               mat-sort-header
-                               disableClear="true">
-                Created
-              </mat-header-cell>
-              <mat-cell *matCellDef="let row">{{ row.created_at | date }}</mat-cell>
-            </ng-container>
-        
-            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-          </mat-table>
-        
-          <mat-paginator [length]="resultsLength" [pageSize]="30">
-          </mat-paginator>
-        </div>
-        
+
+      <mat-table #table [dataSource]="dataSource" class="example-table" matSort matSortDisableClear matSortDirection="asc">
+
+        <ng-container matColumnDef="cod">
+          <mat-header-cell *matHeaderCellDef>Codigo</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.cod }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="nom">
+          <mat-header-cell *matHeaderCellDef>Descripciòn</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.nom }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="ane">
+          <mat-header-cell *matHeaderCellDef>Anestesia</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.ane }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="ayu">
+          <mat-header-cell *matHeaderCellDef>Ayudantia</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.ayu }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="cap">
+          <mat-header-cell *matHeaderCellDef>Capitulo</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.cap }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="des">
+          <mat-header-cell *matHeaderCellDef>Sala</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.des }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="hom">
+          <mat-header-cell *matHeaderCellDef>hom</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.hom }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="mat">
+          <mat-header-cell *matHeaderCellDef>Materiales</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.mat }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="tot">
+          <mat-header-cell *matHeaderCellDef>Valor</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.tot }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="uvr">
+          <mat-header-cell *matHeaderCellDef>UVR</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.uvr }}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+
+
+    </div>
+
   </div>
 
+  <br>
 </div>

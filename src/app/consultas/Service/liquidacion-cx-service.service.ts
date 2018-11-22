@@ -39,7 +39,8 @@ export class LiquidacionCxServiceService {
   }
 
   search(query: string): Observable<Items> {
-    const url = 'https://api.datamuse.com/words';
+    //const url = 'http://api-laravel.net/api/iss2001';
+    const url = 'http://xhygnusqx.siasgestioncontrol.com/public/api/iss2001';
     return this.http
       .get<Items>(url, {
         observe: 'response',
