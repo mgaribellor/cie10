@@ -76,6 +76,15 @@ export class LiquidacionCxComponent implements OnInit {
     return numSelected === numRows;
   }
 
+  // selection changed 
+  //  this.selection.onChange.subscribe((a) => 
+  //  { 
+  //   if (a.added[0]) // will be undefined if no selection 
+  //   { 
+  //    alert('You selected ' + a.added[0].fullName); 
+   //  } 
+   // }); 
+
   /** Selects all rows if they are not all selected; otherwise clear selection. */
   masterToggle() {
     this.isAllSelected() ?
