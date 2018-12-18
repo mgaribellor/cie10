@@ -3,8 +3,8 @@ import { Items, Manual } from '../class/interface';
 import { LiquidacionCxServiceService } from '../Service/liquidacion-cx-service.service';
 import { Observable, of, merge } from 'rxjs';
 import { FormControl } from '@angular/forms';
-import {startWith,map,debounceTime,switchMap,catchError } from 'rxjs/operators';
-import {MatPaginator, MatTableDataSource, MatSort} from '@angular/material';
+import { startWith, map, debounceTime, switchMap, catchError } from 'rxjs/operators';
+import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 import { SelectionModel } from '@angular/cdk/collections';
 
@@ -17,27 +17,28 @@ import { SelectionModel } from '@angular/cdk/collections';
 export class LiquidacionCxComponent implements OnInit {
 
   mans: Manual[] = [
-    {value: 'M1', viewValue: 'Manual 1'},
-    {value: 'M2', viewValue: 'Manual 2'},
+    { value: 'M1', viewValue: 'Manual 1' },
+    { value: 'M2', viewValue: 'Manual 2' },
   ];
 
-  displayedColumns = ['select','cod', 'nom','ane','ayu','cap','des','hom','mat','tot','uvr'];
+  displayedColumns = ['select', 'cod', 'nom', 'ane', 'ayu', 'cap', 'des', 'hom', 'mat', 'tot', 'uvr'];
 
-   columns: Array<any> = [
+  columns: Array<any> = [
     { name: 'position', label: 'No.' },
     { name: 'name', label: 'Name' },
     { name: 'weight', label: 'Weight' },
     { name: 'symbol', label: 'Symbol' }
   ];
 
- // displayedColumns: string[] = this.columns.map(column => column.name);
-  
+  // displayedColumns: string[] = this.columns.map(column => column.name);
+
   public githubAutoComplete$: Observable<Items> = null;
   public autoCompleteControl = new FormControl();
   public dataSource = new MatTableDataSource();
   public showTable: boolean;
+  private elementOld: Array<any> = [];
 
-  constructor(private githubService: LiquidacionCxServiceService, private http: HttpClient) {}
+  constructor(private githubService: LiquidacionCxServiceService, private http: HttpClient) { }
 
   lookup(value: string): Observable<Items> {
     return this.githubService.search(value.toLowerCase()).pipe(
@@ -69,7 +70,7 @@ export class LiquidacionCxComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   selection = new SelectionModel<Items>(true, []);
-  
+
   isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
@@ -79,16 +80,35 @@ export class LiquidacionCxComponent implements OnInit {
   /** Selects all rows if they are not all selected; otherwise clear selection. */
   masterToggle() {
     this.isAllSelected() ?
-        this.selection.clear() :
-        this.dataSource.data.forEach(
-          row => this.selection.select());
+      this.selection.clear() :
+      this.dataSource.data.forEach(
+        row => this.selection.select());
   }
 
-  public selectionChange(item) {  
-    this.showTable = true;
-    this.dataSource.data.push(item);
-    this.dataSource.filter = ""; 
+  model: number;
+  private element: Array<any>;
+  public selectionChange(item: Items) {
+    if (this.model !== 0) {
 
     }
+    this.showTable = true;
+    this.element = this.dataSource.data;
+    var data = this.element.filter(function (element) {
+      return element.cod == item.cod;
+    });
+    if (data.length == 0) {
+      this.dataSource.data.push(item);
+      this.elementOld.push(item);
+    }
+    this.dataSource.filter = "";
+  }
+
+  onBlurMethod(model) {    
+    this.element = this.elementOld;  
+    this.element.map(e => {
+      e.tot = e.tot * (this.model / 100)
+      return e;
+    });
+  }
 
 }
