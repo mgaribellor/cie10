@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 @Injectable({
     providedIn: 'root'
   })
-export class AppConfiguration  {
+export class AppSettings  {
     public Version = 1;
     public Autor = 'Jhon Tovar';
     public Date  = 'Diciembre 2018';  

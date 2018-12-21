@@ -3,16 +3,16 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Items } from '../class/interface';
+import { AppSettings } from 'src/assets/AppSettings';
 @Injectable({
   providedIn: 'root'
 })
 export class LiquidacionCxServiceService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private host: AppSettings) {}
 
   search(query: string): Observable<Items> {
-    //const url = 'http://api-laravel.net/api/iss2001';
-    const url = 'http://xhygnusnews.com/app/public/api/iss2001';
+    const url = this.host.HOST +'/app/public/api/iss2001';
     return this.http
       .get<Items>(url, {
         observe: 'response',

@@ -3,16 +3,16 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { ItemsCIE } from '../class/interface';
 import { map } from 'rxjs/operators';
+import { AppSettings } from 'src/assets/AppSettings';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LiquidacionCIEService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private host: AppSettings) {}
   search(query: string): Observable<ItemsCIE> {
-    //const url = 'http://api-laravel.net/api/iss2001';
-    const url = 'http://xhygnusnews.com/app/public/api/Cie10';
+    const url = this.host.HOST +'/app/public/api/Cie10';
     return this.http
       .get<ItemsCIE>(url, {
         observe: 'response',
