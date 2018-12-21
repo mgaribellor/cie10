@@ -12,7 +12,7 @@ export class LiquidacionCxServiceService {
 
   search(query: string): Observable<Items> {
     //const url = 'http://api-laravel.net/api/iss2001';
-    const url = 'http://xhygnusqx.siasgestioncontrol.com/public/api/iss2001';
+    const url = 'http://xhygnusnews.com/app/public/api/iss2001';
     return this.http
       .get<Items>(url, {
         observe: 'response',

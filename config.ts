@@ -5,7 +5,10 @@ import { Injectable } from '@angular/core';
   })
   
 export class AppConfiguration  {
-  
     public URL_SERVICE = 'https://api.datamuse.com/words';
+    http: any;
+
+    
+
     
 }

@@ -20,7 +20,7 @@ export class LiquidacionCxComponent implements OnInit {
   //name headers table
   displayedColumns = ['select', 'cod', 'nom', 'ane', 'ayu', 'cap', 'des', 'hom', 'mat', 'tot', 'uvr'];
 
-  private model: number;
+  model: number;
   public _serviceAutoComplete$: Observable<Items> = null;
   public autoCompleteControl = new FormControl();
   public dataSource = new MatTableDataSource();
