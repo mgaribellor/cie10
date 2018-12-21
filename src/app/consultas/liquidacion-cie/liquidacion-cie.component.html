@@ -1,29 +1,25 @@
 <div class="col-md-12">
   <div class="row">
     
-    <div class="col-md-9">
+    <div class="col-md-12">
 
       <mat-form-field class="example-full-width">
         <input [formControl]="autoCompleteControl" type="text" placeholder="Còdigo" aria-label="Number" matInput
           [matAutocomplete]="auto">
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-          <mat-option *ngFor="let item of _serviceAutoComplete$ | async" [value]="item.nombre" (onSelectionChange)="selectionChange(item)">
-            {{ item.nombre | titlecase}}
+          <mat-option *ngFor="let item of _serviceAutocomplete$ | async" [value]="item.name" (onSelectionChange)="selectionChange(item)">
+            {{ item.name | titlecase}}
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
 
     </div>
 
-    <div class="col-md-3">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Porcentaje %" [(ngModel)]="model" type="number" value="0" 
-        (blur)="onBlurMethod(model)">
-      </mat-form-field>
-    </div>
-
+    
   </div>
-  <div class="row" [hidden]="!showTable">
+
+
+  <div class="row">
     <div class="mat-elevation-z8 responsive_table example-container">
       <!--   <div class="example-loading-shade"
                *ngIf="isLoadingResults || isRateLimitReached">
@@ -55,49 +51,26 @@
           <mat-cell *matCellDef="let row">{{ row.cod }}</mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="nom">
+        <ng-container matColumnDef="name">
           <mat-header-cell *matHeaderCellDef>Descripciòn</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.nom }}</mat-cell>
+          <mat-cell *matCellDef="let row">{{ row.name }}</mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="ane">
-          <mat-header-cell *matHeaderCellDef>Anestesia</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.ane | currency }}</mat-cell>
+        <ng-container matColumnDef="limsuperior">
+          <mat-header-cell *matHeaderCellDef>Lim Superior</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.limsuperior }}</mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="ayu">
-          <mat-header-cell *matHeaderCellDef>Ayudantia</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.ayu }}</mat-cell>
+        <ng-container matColumnDef="liminferior">
+          <mat-header-cell *matHeaderCellDef>Lim Inferior</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.liminferior }}</mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="cap">
-          <mat-header-cell *matHeaderCellDef>Capitulo</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.cap }}</mat-cell>
+        <ng-container matColumnDef="sexo">
+          <mat-header-cell *matHeaderCellDef>Sexo</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.sexo }}</mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="des">
-          <mat-header-cell *matHeaderCellDef>Sala</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.des }}</mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="hom">
-          <mat-header-cell *matHeaderCellDef>hom</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.hom }}</mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="mat">
-          <mat-header-cell *matHeaderCellDef>Materiales</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.mat }}</mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="tot">
-          <mat-header-cell *matHeaderCellDef>Valor</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.tot  | currency }}</mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="uvr">
-          <mat-header-cell *matHeaderCellDef>UVR</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.uvr }}</mat-cell>
-        </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
@@ -107,6 +80,6 @@
     </div>
 
   </div>
-
+ 
   <br>
 </div>

@@ -32,6 +32,15 @@ export interface GithubIssue {
    
   }
 
+  export interface ItemsCIE {
+    cod: string;
+    liminferior: string;   
+    limsuperior : string;
+    name : string;
+    sexo : string;
+  }
+
+
   export interface Manual {
     value: string;
     viewValue: string;

@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { Items } from '../class/interface';
+import { Observable } from 'rxjs/internal/Observable';
+import { ItemsCIE } from '../class/interface';
+import { map } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
-export class LiquidacionCxServiceService {
+export class LiquidacionCIEService {
 
   constructor(private http: HttpClient) {}
-
-  search(query: string): Observable<Items> {
+  search(query: string): Observable<ItemsCIE> {
     //const url = 'http://api-laravel.net/api/iss2001';
-    const url = 'http://xhygnusqx.siasgestioncontrol.com/public/api/iss2001';
+    const url = 'http://xhygnusnews.com/app/public/api/Cie10';
     return this.http
-      .get<Items>(url, {
+      .get<ItemsCIE>(url, {
         observe: 'response',
         params: {
           ml: query
@@ -26,4 +26,5 @@ export class LiquidacionCxServiceService {
         })
       );
   }
+  
 }

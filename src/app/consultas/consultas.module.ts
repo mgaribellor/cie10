@@ -6,6 +6,7 @@ import { LiquidacionCxComponent } from './liquidacion-cx/liquidacion-cx.componen
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
+import { LiquidacionCIEComponent } from './liquidacion-cie/liquidacion-cie.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { MaterialModule } from '../material.module';
     MDBBootstrapModule.forRoot(),
     MaterialModule
   ],
-  declarations: [LiquidacionCxComponent]
+  declarations: [LiquidacionCxComponent, LiquidacionCIEComponent]
 })
 export class ConsultasModule { }
