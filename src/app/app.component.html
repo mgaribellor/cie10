@@ -1,21 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.  scrolling-navbar, fixed-top  -->
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-blue primary-color" [containerInside]="true">
-  <logo>
+  <!-- <logo>
       <a class="logo navbar-brand" href="#"><strong>Consultas</strong></a>
-  </logo>
+  </logo> -->
   <links>
       <ul class="navbar-nav mr-auto">
-          <li class="nav-item active waves-light" mdbRippleRadius>
-              <a class="nav-link">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item waves-light" mdbRippleRadius>
+          <!-- <li class="nav-item active waves-light" mdbRippleRadius>
+              <a class="nav-link" href="https://xhygnusnews.com/">Home <span class="sr-only">(current)</span></a>
+          </li> -->
+         <!--  <li class="nav-item waves-light" mdbRippleRadius>
               <a [routerLink]="['consultas/LiquidacionCx']" class="nav-link">LiquidacionCx</a>
-          </li>   
+          </li>   --> 
           <li class="nav-item waves-light" mdbRippleRadius>
-            <a [routerLink]="['consultas/LiquidacionCIE']" class="nav-link">Liquidacion CIE</a>
+            <a [routerLink]="['consultas/LiquidacionCIE']" class="nav-link">CIE10</a>
         </li>     
       </ul>
-      <ul class="navbar-nav nav-flex-icons">
+     <!--  <ul class="navbar-nav nav-flex-icons">
           <li class="nav-item waves-light" mdbRippleRadius>
               <a class="nav-link"><i class="fa fa-facebook"></i></a>
           </li>
@@ -25,19 +25,15 @@
           <li class="nav-item waves-light" mdbRippleRadius>
               <a class="nav-link"><i class="fa fa-instagram"></i></a>
           </li>
-      </ul>
+      </ul> -->
   </links>
 </mdb-navbar>
 <!-- Main -->
 <main>
-  <div class="container mt-1">
-
-    <div class="row">
+  <div class=" mt-1">
         <div class="col-md-12">
             <router-outlet></router-outlet>
         </div>
-    </div>
-    
     <!--Section: Features v.3-->
     <!-- <section class="section feature-box pt-5">   
         <br>
@@ -45,18 +41,14 @@
      
     </section> -->
     <!--Section: Features v.3-->
-    
   </div>
 </main>
 <!--Main Navigation-->
 
 <!-- Footer -->
-<footer class="page-footer font-small blue">
-
-    <!-- Copyright -->
+<!-- <footer class="page-footer font-small blue">
     <div class="footer-copyright text-center py-3">© 2018 Copyright:
       <a href="#"> Jhon Tovar - Mauricio Garibello</a>
     </div>
-    <!-- Copyright -->
-  </footer>
+  </footer> -->
   <!-- Footer -->

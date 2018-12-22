@@ -7,5 +7,5 @@ export class AppSettings  {
     public Version = 1;
     public Autor = 'Jhon Tovar';
     public Date  = 'Diciembre 2018';  
-    public HOST = 'http://xhygnusnews.com';   
+    public HOST = '';   
 }

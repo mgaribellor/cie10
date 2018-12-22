@@ -8,7 +8,7 @@ const routes: Routes = [
     path: 'consultas',
     children: [
       { path: 'LiquidacionCx', component: LiquidacionCxComponent },
-      { path: 'LiquidacionCIE', component: LiquidacionCIEComponent }
+      { path: 'LiquidacionCIE', component: LiquidacionCIEComponent }      
     ]
   }
 ];
