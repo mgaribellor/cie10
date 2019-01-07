@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { ItemsCIE } from '../class/interface';
 import { Observable } from 'rxjs/internal/Observable';
 import { FormControl } from '@angular/forms';
@@ -9,7 +9,7 @@ import { startWith, debounceTime, switchMap } from 'rxjs/operators';
 import { of } from 'rxjs/internal/observable/of';
 import { SelectionModel } from '@angular/cdk/collections';
 import { HttpClient } from '@angular/common/http';
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource, MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-liquidacion-cie',
@@ -18,8 +18,8 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class LiquidacionCIEComponent implements OnInit {
 
-  constructor(private _service: LiquidacionCIEService, private http: HttpClient) { }
-
+  constructor(private _service: LiquidacionCIEService, private http: HttpClient,public dialog: MatDialog) { }
+  
   displayedColumns = ['cod', 'name', 'liminferior', 'limsuperior', 'sexo'];
 
   private element: Array<any>;
@@ -61,4 +61,17 @@ export class LiquidacionCIEComponent implements OnInit {
     this.dataSource.data.push(item);
     this.dataSource.filter = "";
   }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogContentCIE);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
+
+@Component({
+  selector: 'dialog-content-CIE',
+  templateUrl: './dialog/dialog-content-CIE.html',
+})
+export class DialogContentCIE {}

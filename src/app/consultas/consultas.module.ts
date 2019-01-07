@@ -6,17 +6,20 @@ import { LiquidacionCxComponent } from './liquidacion-cx/liquidacion-cx.componen
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
-import { LiquidacionCIEComponent } from './liquidacion-cie/liquidacion-cie.component';
+import { LiquidacionCIEComponent, DialogContentCIE } from './liquidacion-cie/liquidacion-cie.component';
 
 
 @NgModule({
-  imports: [
+  imports: [    
     CommonModule,
     ConsultasRoutingModule,
     FormsModule,
     MDBBootstrapModule.forRoot(),
-    MaterialModule
+    MaterialModule    
   ],
-  declarations: [LiquidacionCxComponent, LiquidacionCIEComponent]
+  entryComponents: [
+    DialogContentCIE
+  ],
+  declarations: [LiquidacionCxComponent, LiquidacionCIEComponent,DialogContentCIE]
 })
 export class ConsultasModule { }
