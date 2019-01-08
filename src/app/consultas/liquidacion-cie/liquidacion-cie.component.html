@@ -3,7 +3,7 @@
     
     <div class="col-md-11">
       <mat-form-field class="example-full-width">
-        <input [formControl]="autoCompleteControl" type="text" placeholder="Ingrese el Còdigo o Descripciòn" aria-label="Number" matInput
+        <input [formControl]="autoCompleteControl" type="text" placeholder="Ingrese el Código o Descripción" aria-label="Number" matInput
           [matAutocomplete]="auto">
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
           <mat-option *ngFor="let item of _serviceAutocomplete$ | async" [value]="item.name" (onSelectionChange)="selectionChange(item)">

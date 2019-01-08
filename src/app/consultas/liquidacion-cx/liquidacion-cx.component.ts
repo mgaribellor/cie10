@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { Items, Manual } from '../class/interface';
+import { Items } from '../class/interface';
 import { LiquidacionCxServiceService } from '../Service/liquidacion-cx-service.service';
 import { Observable, of, merge } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import { startWith, map, debounceTime, switchMap, catchError } from 'rxjs/operators';
-import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
+import { MatPaginator, MatTableDataSource, MatSort, MatDialog } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
@@ -15,17 +15,16 @@ import { SelectionModel } from '@angular/cdk/collections';
 
 export class LiquidacionCxComponent implements OnInit {
 
-  constructor(private _service: LiquidacionCxServiceService) { }
+  constructor(private _service: LiquidacionCxServiceService, public dialog: MatDialog) { }
 
   //name headers table
-  displayedColumns = ['select', 'cod', 'nom', 'ane', 'ayu', 'cap', 'des', 'hom', 'mat', 'tot', 'uvr'];
+  displayedColumns = ['select', 'cod', 'nom', 'uvr', 'cap', 'hom', 'ane', 'ayu', 'des', 'mat', 'tot'];
 
   model: number;
   public _serviceAutoComplete$: Observable<Items> = null;
   public autoCompleteControl = new FormControl();
   public dataSource = new MatTableDataSource();
   public showTable: boolean;
-  private elementOld: Array<any> = [];
 
   lookup(value: string): Observable<Items> {
     return this._service.search(value.toLowerCase()).pipe(
@@ -64,6 +63,7 @@ export class LiquidacionCxComponent implements OnInit {
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
+
   masterToggle() {
     this.isAllSelected() ?
       this.selection.clear() :
@@ -71,27 +71,37 @@ export class LiquidacionCxComponent implements OnInit {
         row => this.selection.select());
   }
 
-  
   private element: Array<any>;
   public selectionChange(item: Items) {
-
     this.showTable = true;
     this.element = this.dataSource.data;
     this.element.filter(function (element) {
-      return element.cod == item.cod;
+      this.dataSource.data.splice( this.dataSource.data.indexOf(element), 1 );
     });
-   
-      this.dataSource.data.push(item);
-      this.elementOld.push(item);
-    
+
+    this.dataSource.data.push(item);
     this.dataSource.filter = "";
   }
 
-  onBlurMethod() {    
-    this.element = this.elementOld;  
-    this.element.map(e => {
-      e.tot = e.tot * (this.model / 100)
+  onBlurMethod() {
+    if(this.model === null ||  this.model === undefined || this.element === undefined){return false;}
+    this.element.map(e => {      
+      var valor = (e.vlr * (this.model / 100));
+      e.tot = valor + parseFloat(e.vlr);
       return e;
     });
   }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogContentSIS2001);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
+
+@Component({
+  selector: 'dialog-content-SIS2001',
+  templateUrl: './dialog/dialog-content-SIS2001.html',
+})
+export class DialogContentSIS2001 {}

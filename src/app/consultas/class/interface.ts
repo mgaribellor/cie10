@@ -29,7 +29,7 @@ export interface GithubIssue {
     tot : string; 
     uvr : string; 
     nombre: string;
-   
+    vlr : string; 
   }
 
   export interface ItemsCIE {

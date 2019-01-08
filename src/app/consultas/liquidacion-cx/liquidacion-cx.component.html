@@ -1,10 +1,10 @@
 <div class="col-md-12">
   <div class="row">
     
-    <div class="col-md-9">
+    <div class="col-md-10">
 
       <mat-form-field class="example-full-width">
-        <input [formControl]="autoCompleteControl" type="text" placeholder="Còdigo" aria-label="Number" matInput
+        <input [formControl]="autoCompleteControl" type="text" placeholder="Ingrese el Código o Descripción" aria-label="Number" matInput
           [matAutocomplete]="auto">
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
           <mat-option *ngFor="let item of _serviceAutoComplete$ | async" [value]="item.nombre" (onSelectionChange)="selectionChange(item)">
@@ -15,15 +15,18 @@
 
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-1">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Porcentaje %" [(ngModel)]="model" type="number" value="0" 
+        <input matInput placeholder="%" [(ngModel)]="model" type="number" value="0" 
         (blur)="onBlurMethod()">
       </mat-form-field>
     </div>
+    <div class="col-md-1 mt-2">           
+      <mat-icon (click)="openDialog()">help</mat-icon>        
+    </div>
 
   </div>
-  <div class="row" [hidden]="!showTable">
+  <div class="row" >
     <div class="mat-elevation-z8 responsive_table example-container">
       <!--   <div class="example-loading-shade"
                *ngIf="isLoadingResults || isRateLimitReached">
@@ -62,11 +65,11 @@
 
         <ng-container matColumnDef="ane">
           <mat-header-cell *matHeaderCellDef>Anestesia</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.ane | currency }}</mat-cell>
+          <mat-cell *matCellDef="let row">{{ row.ane }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="ayu">
-          <mat-header-cell *matHeaderCellDef>Ayudantia</mat-header-cell>
+          <mat-header-cell *matHeaderCellDef>Ayudantìa</mat-header-cell>
           <mat-cell *matCellDef="let row">{{ row.ayu }}</mat-cell>
         </ng-container>
 
@@ -81,7 +84,7 @@
         </ng-container>
 
         <ng-container matColumnDef="hom">
-          <mat-header-cell *matHeaderCellDef>hom</mat-header-cell>
+          <mat-header-cell *matHeaderCellDef>Honorario</mat-header-cell>
           <mat-cell *matCellDef="let row">{{ row.hom }}</mat-cell>
         </ng-container>
 
@@ -91,8 +94,8 @@
         </ng-container>
 
         <ng-container matColumnDef="tot">
-          <mat-header-cell *matHeaderCellDef>Valor</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.tot  | currency }}</mat-cell>
+          <mat-header-cell *matHeaderCellDef>Total</mat-header-cell>
+          <mat-cell *matCellDef="let row">{{ row.tot | currency }}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="uvr">
           <mat-header-cell *matHeaderCellDef>UVR</mat-header-cell>
@@ -103,10 +106,10 @@
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>
 
-
     </div>
 
   </div>
 
   <br>
+  <!-- [hidden]="!showTable" -->
 </div>

@@ -56,7 +56,7 @@ export class LiquidacionCIEComponent implements OnInit {
   public selectionChange(item: ItemsCIE) {
     this.element = this.dataSource.data;
     this.element.filter(function (element) {
-      return element.cod == item.cod;
+      this.dataSource.data.splice( this.dataSource.data.indexOf(element), 1 );
     });
     this.dataSource.data.push(item);
     this.dataSource.filter = "";
