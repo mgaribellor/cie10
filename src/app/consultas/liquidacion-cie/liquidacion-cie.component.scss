@@ -1,6 +1,6 @@
-.example-full-width {
-    width: 100%;
-  }
+  .example-full-width {
+      width: 100%;
+    }
 
   .example-container {
     height: 400px;
@@ -13,6 +13,11 @@
   .mat-elevation-z8 {
     width: 100%;
   }
+
+  .mobile-label {
+    display: none;
+  }
+
 @media(max-width: 600px) {
   // Custom header label that shows in each column, with a set width and bold font
   .mobile-label {
@@ -34,5 +39,18 @@
   }
   .responsive_table {
     overflow-x: auto !important;
+  }
+
+  .mat-cell:first-of-type{
+    padding-left: initial;
+  }
+
+  .mobile-label {
+    width: 80px;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 1%;
+  }
 }
-}
+
+

@@ -54,10 +54,10 @@ export class LiquidacionCIEComponent implements OnInit {
 
   selection = new SelectionModel<ItemsCIE>(true, []);
   public selectionChange(item: ItemsCIE) {
-    this.element = this.dataSource.data;
+    /* this.element = this.dataSource.data;
     this.element.filter(function (element) {
       this.dataSource.data.splice( this.dataSource.data.indexOf(element), 1 );
-    });
+    }); */
     this.dataSource.data.push(item);
     this.dataSource.filter = "";
   }

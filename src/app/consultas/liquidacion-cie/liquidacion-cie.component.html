@@ -1,10 +1,10 @@
 <div class="col-md-12">
   <div class="row">
-    
+
     <div class="col-md-11">
       <mat-form-field class="example-full-width">
-        <input [formControl]="autoCompleteControl" type="text" placeholder="Ingrese el Código o Descripción" aria-label="Number" matInput
-          [matAutocomplete]="auto">
+        <input [formControl]="autoCompleteControl" type="text" placeholder="Ingrese el Código o Descripción" aria-label="Number"
+          matInput [matAutocomplete]="auto">
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
           <mat-option *ngFor="let item of _serviceAutocomplete$ | async" [value]="item.name" (onSelectionChange)="selectionChange(item)">
             {{ item.name | titlecase}}
@@ -13,8 +13,8 @@
       </mat-form-field>
 
     </div>
-    <div class="col-md-1 mt-2">           
-      <mat-icon (click)="openDialog()">help</mat-icon>        
+    <div class="col-md-1 mt-2">
+      <mat-icon (click)="openDialog()">help</mat-icon>
     </div>
 
   </div>
@@ -29,46 +29,45 @@
             </div>
           </div> -->
 
-      <mat-table #table [dataSource]="dataSource" matSort matSortDisableClear matSortDirection="asc">
+      <mat-table #table [dataSource]="dataSource" matSort matSortDisableClear matSortDirection="asc"
+      >
 
-          <ng-container matColumnDef="select">
-              <th mat-header-cell *matHeaderCellDef>
-                <mat-checkbox (change)="$event ? masterToggle() : null"
-                              [checked]="selection.hasValue() && isAllSelected()"
-                              [indeterminate]="selection.hasValue() && !isAllSelected()">
-                </mat-checkbox>
-              </th>
-              <td mat-cell *matCellDef="let row">
-                <mat-checkbox (click)="$event.stopPropagation();"
-                              (change)="$event ? selection.toggle(row) : null"
-                              [checked]="selection.isSelected(row)">
-                </mat-checkbox>
-              </td>
-            </ng-container>
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+              [indeterminate]="selection.hasValue() && !isAllSelected()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation();" (change)="$event ? selection.toggle(row) : null"
+              [checked]="selection.isSelected(row)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
 
         <ng-container matColumnDef="cod">
           <mat-header-cell *matHeaderCellDef>Codigo</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.cod }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Codigo:</span> {{ row.cod }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="name">
-          <mat-header-cell *matHeaderCellDef>Descripciòn</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.name }}</mat-cell>
+          <mat-header-cell *matHeaderCellDef>Descripción</mat-header-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Descripción:</span>{{ row.name }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="limsuperior">
           <mat-header-cell *matHeaderCellDef>Lim Superior</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.limsuperior }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Lim Superior:</span>{{ row.limsuperior }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="liminferior">
           <mat-header-cell *matHeaderCellDef>Lim Inferior</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.liminferior }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Lim Inferior:</span>{{ row.liminferior }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="sexo">
           <mat-header-cell *matHeaderCellDef>Sexo</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.sexo }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Sexo:</span>{{ row.sexo }}</mat-cell>
         </ng-container>
 
 
@@ -80,6 +79,6 @@
     </div>
 
   </div>
- 
+
   <br>
 </div>

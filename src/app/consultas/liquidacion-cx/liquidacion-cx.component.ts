@@ -74,12 +74,13 @@ export class LiquidacionCxComponent implements OnInit {
   private element: Array<any>;
   public selectionChange(item: Items) {
     this.showTable = true;
-    this.element = this.dataSource.data;
+    this.dataSource.data.push(item);
+
+/*     this.element = this.dataSource.data;    
     this.element.filter(function (element) {
       this.dataSource.data.splice( this.dataSource.data.indexOf(element), 1 );
-    });
+    });    */ 
 
-    this.dataSource.data.push(item);
     this.dataSource.filter = "";
   }
 
