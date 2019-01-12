@@ -17,8 +17,8 @@ export class LiquidacionCxComponent implements OnInit {
 
   constructor(private _service: LiquidacionCxServiceService, public dialog: MatDialog) { }
 
-  //name headers table
-  displayedColumns = ['select', 'cod', 'nom', 'uvr', 'cap', 'hom', 'ane', 'ayu', 'des', 'mat', 'tot'];
+  //name headers table : 'select',
+  displayedColumns = [ 'cod', 'nom', 'uvr', 'cap', 'hom', 'ane', 'ayu', 'des', 'mat', 'tot'];
 
   model: number;
   public _serviceAutoComplete$: Observable<Items> = null;
@@ -55,9 +55,9 @@ export class LiquidacionCxComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  selection = new SelectionModel<Items>(true, []);
+  //selection = new SelectionModel<Items>(true, []);
 
-  /** Selects all rows if they are not all selected; otherwise clear selection. */
+  /** Selects all rows if they are not all selected; otherwise clear selection. 
   isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
@@ -70,14 +70,13 @@ export class LiquidacionCxComponent implements OnInit {
       this.dataSource.data.forEach(
         row => this.selection.select());
   }
-
+*/
   private element: Array<any>;
   public selectionChange(item: Items) {
     this.showTable = true;
     this.dataSource.data.push(item);
-
-/*     this.element = this.dataSource.data;    
-    this.element.filter(function (element) {
+   this.element = this.dataSource.data;    
+/*    this.element.filter(function (element) {
       this.dataSource.data.splice( this.dataSource.data.indexOf(element), 1 );
     });    */ 
 
@@ -85,7 +84,7 @@ export class LiquidacionCxComponent implements OnInit {
   }
 
   onBlurMethod() {
-    if(this.model === null ||  this.model === undefined || this.element === undefined){return false;}
+    if(this.model === null ||  this.model === undefined || this.element === undefined){ this.model = 0}
     this.element.map(e => {      
       var valor = (e.vlr * (this.model / 100));
       e.tot = valor + parseFloat(e.vlr);

@@ -2,9 +2,13 @@
   <div class="row">
 
     <div class="col-md-11">
+
       <mat-form-field class="example-full-width">
         <input [formControl]="autoCompleteControl" type="text" placeholder="Ingrese el Código o Descripción" aria-label="Number"
           matInput [matAutocomplete]="auto">
+        <button mat-button *ngIf="autoCompleteControl.value" matSuffix mat-icon-button aria-label="Clear" (click)="autoCompleteControl.setValue(null,{emitEvent: false})">
+          <mat-icon>close</mat-icon>
+        </button>
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
           <mat-option *ngFor="let item of _serviceAutocomplete$ | async" [value]="item.name" (onSelectionChange)="selectionChange(item)">
             {{ item.name | titlecase}}
@@ -29,8 +33,7 @@
             </div>
           </div> -->
 
-      <mat-table #table [dataSource]="dataSource" matSort matSortDisableClear matSortDirection="asc"
-      >
+      <mat-table #table [dataSource]="dataSource" matSort matSortDisableClear matSortDirection="asc">
 
         <ng-container matColumnDef="select">
           <th mat-header-cell *matHeaderCellDef>
@@ -46,8 +49,8 @@
         </ng-container>
 
         <ng-container matColumnDef="cod">
-          <mat-header-cell *matHeaderCellDef>Codigo</mat-header-cell>
-          <mat-cell *matCellDef="let row"><span class="mobile-label">Codigo:</span> {{ row.cod }}</mat-cell>
+          <mat-header-cell *matHeaderCellDef>Código</mat-header-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Código:</span> {{ row.cod }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="name">
@@ -80,5 +83,4 @@
 
   </div>
 
-  <br>
 </div>

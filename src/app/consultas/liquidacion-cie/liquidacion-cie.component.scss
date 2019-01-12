@@ -20,11 +20,6 @@
 
 @media(max-width: 600px) {
   // Custom header label that shows in each column, with a set width and bold font
-  .mobile-label {
-    width: 80px;
-    display: inline-block;
-    font-weight: bold;
-  }
 
   // Remove the header row altogether
   .mat-header-row {

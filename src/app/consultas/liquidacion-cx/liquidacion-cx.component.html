@@ -1,11 +1,14 @@
 <div class="col-md-12">
   <div class="row">
-    
+
     <div class="col-md-10">
 
       <mat-form-field class="example-full-width">
-        <input [formControl]="autoCompleteControl" type="text" placeholder="Ingrese el Código o Descripción" aria-label="Number" matInput
-          [matAutocomplete]="auto">
+        <input [formControl]="autoCompleteControl" type="text" placeholder="Ingrese el Código o Descripción" aria-label="Number"
+          matInput [matAutocomplete]="auto">
+        <button mat-button *ngIf="autoCompleteControl.value" matSuffix mat-icon-button aria-label="Clear" (click)="autoCompleteControl.setValue(null,{emitEvent: false})">
+          <mat-icon>close</mat-icon>
+        </button>
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
           <mat-option *ngFor="let item of _serviceAutoComplete$ | async" [value]="item.nombre" (onSelectionChange)="selectionChange(item)">
             {{ item.nombre | titlecase}}
@@ -17,16 +20,15 @@
 
     <div class="col-md-1">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="%" [(ngModel)]="model" type="number" value="0" 
-        (blur)="onBlurMethod()">
+        <input matInput placeholder="%" [(ngModel)]="model" type="number" value="0" (blur)="onBlurMethod()">
       </mat-form-field>
     </div>
-    <div class="col-md-1 mt-2">           
-      <mat-icon (click)="openDialog()">help</mat-icon>        
+    <div class="col-md-1 mt-2">
+      <mat-icon (click)="openDialog()">help</mat-icon>
     </div>
 
   </div>
-  <div class="row" >
+  <div class="row">
     <div class="mat-elevation-z8 responsive_table example-container">
       <!--   <div class="example-loading-shade"
                *ngIf="isLoadingResults || isRateLimitReached">
@@ -38,7 +40,7 @@
 
       <mat-table #table [dataSource]="dataSource" matSort matSortDisableClear matSortDirection="asc">
 
-          <ng-container matColumnDef="select">
+        <!--   <ng-container matColumnDef="select">
               <th mat-header-cell *matHeaderCellDef>
                 <mat-checkbox (change)="$event ? masterToggle() : null"
                               [checked]="selection.hasValue() && isAllSelected()"
@@ -51,55 +53,55 @@
                               [checked]="selection.isSelected(row)">
                 </mat-checkbox>
               </td>
-            </ng-container>
+            </ng-container> -->
 
         <ng-container matColumnDef="cod">
-          <mat-header-cell *matHeaderCellDef>Codigo</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.cod }}</mat-cell>
+          <mat-header-cell *matHeaderCellDef>Código</mat-header-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Código:</span> {{ row.cod }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="nom">
-          <mat-header-cell *matHeaderCellDef>Descripciòn</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.nom }}</mat-cell>
+          <mat-header-cell *matHeaderCellDef>Descripción</mat-header-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Descripción:</span> {{ row.nom }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="ane">
           <mat-header-cell *matHeaderCellDef>Anestesia</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.ane }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Anestesia:</span> {{ row.ane }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="ayu">
           <mat-header-cell *matHeaderCellDef>Ayudantìa</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.ayu }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Ayudantìa:</span> {{ row.ayu }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="cap">
           <mat-header-cell *matHeaderCellDef>Capitulo</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.cap }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Capitulo:</span>{{ row.cap }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="des">
           <mat-header-cell *matHeaderCellDef>Sala</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.des }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Capitulo:</span>{{ row.des }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="hom">
           <mat-header-cell *matHeaderCellDef>Honorario</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.hom }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Sala:</span>{{ row.hom }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="mat">
           <mat-header-cell *matHeaderCellDef>Materiales</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.mat }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Materiales:</span>{{ row.mat }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="tot">
           <mat-header-cell *matHeaderCellDef>Total</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.tot | currency }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">Total:</span>{{ row.tot | currency }}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="uvr">
           <mat-header-cell *matHeaderCellDef>UVR</mat-header-cell>
-          <mat-cell *matCellDef="let row">{{ row.uvr }}</mat-cell>
+          <mat-cell *matCellDef="let row"><span class="mobile-label">UVR:</span>{{ row.uvr }}</mat-cell>
         </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>

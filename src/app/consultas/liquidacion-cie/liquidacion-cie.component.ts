@@ -8,7 +8,6 @@ import { catchError } from 'rxjs/internal/operators/catchError';
 import { startWith, debounceTime, switchMap } from 'rxjs/operators';
 import { of } from 'rxjs/internal/observable/of';
 import { SelectionModel } from '@angular/cdk/collections';
-import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource, MatDialog } from '@angular/material';
 
 @Component({
@@ -18,7 +17,7 @@ import { MatTableDataSource, MatDialog } from '@angular/material';
 })
 export class LiquidacionCIEComponent implements OnInit {
 
-  constructor(private _service: LiquidacionCIEService, private http: HttpClient,public dialog: MatDialog) { }
+  constructor(private _service: LiquidacionCIEService, public dialog: MatDialog) { }
   
   displayedColumns = ['cod', 'name', 'liminferior', 'limsuperior', 'sexo'];
 
@@ -50,6 +49,8 @@ export class LiquidacionCIEComponent implements OnInit {
         }
       })
     );
+
+    console.log(this.autoCompleteControl);
   }
 
   selection = new SelectionModel<ItemsCIE>(true, []);
@@ -68,6 +69,7 @@ export class LiquidacionCIEComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
+
 }
 
 @Component({

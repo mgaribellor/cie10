@@ -13,7 +13,9 @@
   .mat-elevation-z8 {
     width: 100%;
   }
-
+  .mobile-label {
+    display: none;
+  }
   
 @media(max-width: 600px) {
   // Custom header label that shows in each column, with a set width and bold font
