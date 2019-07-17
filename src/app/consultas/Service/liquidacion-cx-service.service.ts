@@ -12,7 +12,7 @@ export class LiquidacionCxServiceService {
   constructor(private http: HttpClient, private host: AppSettings) {}
 
   search(query: string): Observable<Items> {
-    const url = this.host.HOST +'/app/public/api/iss2001';
+    const url = this.host.HOST +'/api/iss2001';
     return this.http
       .get<Items>(url, {
         observe: 'response',

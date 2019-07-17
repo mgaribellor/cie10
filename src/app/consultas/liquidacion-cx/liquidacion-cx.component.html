@@ -1,8 +1,8 @@
 <div class="col-md-12">
   <div class="row">
-
+      <h3>Consulta de tarifas ISS2001 </h3>
     <div class="col-md-10">
-
+     
       <mat-form-field class="example-full-width">
         <input [formControl]="autoCompleteControl" type="text" placeholder="Ingrese el Código o Descripción" aria-label="Number"
           matInput [matAutocomplete]="auto">
@@ -18,7 +18,7 @@
 
     </div>
 
-    <div class="col-md-1">
+    <div class="col-md-2">
       <mat-form-field class="example-full-width">
         <input matInput placeholder="%" [(ngModel)]="model" type="number" value="0" (blur)="onBlurMethod()">
       </mat-form-field>

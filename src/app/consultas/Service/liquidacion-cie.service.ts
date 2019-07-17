@@ -12,7 +12,7 @@ export class LiquidacionCIEService {
 
   constructor(private http: HttpClient,private host: AppSettings) {}
   search(query: string): Observable<ItemsCIE> {
-    const url = this.host.HOST +'/app/public/api/Cie10';
+    const url = this.host.HOST +'/api/Cie10';
     return this.http
       .get<ItemsCIE>(url, {
         observe: 'response',

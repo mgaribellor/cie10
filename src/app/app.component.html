@@ -1,51 +1,59 @@
-<!--The content below is only a placeholder and can be replaced.  scrolling-navbar, fixed-top 
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-blue primary-color" [containerInside]="true">
-  <logo>
-      <a class="logo navbar-brand" href="#"><strong>Consultas</strong></a>
-  </logo> 
+<!--The content below is only a placeholder and can be replaced.  scrolling-navbar, fixed-top -->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-blue info-color" [containerInside]="true">
+  <!-- <logo>
+      <a class="logo navbar-brand" href="#"><strong>Consulta Codigos Cie10 y demas terminos en salud</strong></a>
+  </logo>  -->
   <links>
       <ul class="navbar-nav mr-auto">
-         <li class="nav-item active waves-light" mdbRippleRadius>
-              <a class="nav-link" href="https://xhygnusnews.com/">Home <span class="sr-only">(current)</span></a>
+         <li class="nav-item active waves-effect waves-light btn" mdbRippleRadius>
+              <a class="nav-link" href="https://xhygnusnews.com/">Inicio <span class="sr-only">(current)</span></a>
           </li> 
-         <li class="nav-item waves-light" mdbRippleRadius>
-              <a [routerLink]="['consultas/LiquidacionCx']" class="nav-link">ISS2001</a>
+         <li class="nav-item waves-effect waves-light btn" mdbRippleRadius>
+              <a [routerLink]="['consultas/LiquidacionCx']" class="nav-link">CONSULTA TARIFAS ISS2001</a>
           </li>
-          <li class="nav-item waves-light" mdbRippleRadius>
-            <a [routerLink]="['consultas/LiquidacionCIE']" class="nav-link">CIE10</a>
+          <li class="nav-item waves-effect waves-light btn" mdbRippleRadius>
+            <a [routerLink]="['consultas/LiquidacionCIE']" class="nav-link">CONSULTA CODIGOS CIE10</a>
         </li>     
       </ul>
     <ul class="navbar-nav nav-flex-icons">
-          <li class="nav-item waves-light" mdbRippleRadius>
-              <a class="nav-link"><i class="fa fa-facebook"></i></a>
+          <li class="nav-item waves-purple" mdbRippleRadius>
+              <a class="nav-link" href="https://www.facebook.com/mgaribellor" target="_blank"><i class="fa fa-facebook"></i></a>
           </li>
-          <li class="nav-item waves-light" mdbRippleRadius>
-              <a class="nav-link"><i class="fa fa-twitter"></i></a>
+          <li class="nav-item waves-purple" mdbRippleRadius>
+              <a class="nav-link" href="https://twitter.com/mgaribellor" target="_blank"><i class="fa fa-twitter"></i></a>
           </li>
-          <li class="nav-item waves-light" mdbRippleRadius>
-              <a class="nav-link"><i class="fa fa-instagram"></i></a>
+          <li class="nav-item waves-purple" mdbRippleRadius>
+              <a class="nav-link" href="https://www.instagram.com/mgaribellor/" target="_blank"><i class="fa fa-instagram"></i></a>
           </li>
       </ul> 
   </links>
-</mdb-navbar>--> 
+</mdb-navbar>
+
+<div class="container-fluid">
+    <main>
+        <div class=" mt-1">
+          <div class="col-md-12">
+            
+           
+
+            <br>
+              <router-outlet></router-outlet>
+          </div>
+        </div>
+      </main>
+</div>
 <nav mat-tab-nav-bar>    
-    <a mat-tab-link routerLinkActive #activeCIE="routerLinkActive" [active]="activeCIE.isActive"  [routerLink]="['consultas/LiquidacionCIE']">CIE10</a>
-    <a mat-tab-link  routerLinkActive #activeISS="routerLinkActive" [active]="activeISS.isActive"  [routerLink]="['consultas/LiquidacionCx']">ISS2001</a>
+ <!--    <a mat-tab-link routerLinkActive #activeCIE="routerLinkActive" [active]="activeCIE.isActive"  [routerLink]="['consultas/LiquidacionCIE']">CIE10</a>
+    <a mat-tab-link  routerLinkActive #activeISS="routerLinkActive" [active]="activeISS.isActive"  [routerLink]="['consultas/LiquidacionCx']">ISS2001</a> -->
   </nav>
 <!-- Main -->
-<main>
-  <div class=" mt-1">
-    <div class="col-md-12">
-        <router-outlet></router-outlet>
-    </div>
-  </div>
-</main>
+
 <!--Main Navigation-->
 
 <!-- Footer -->
-<!-- <footer class="page-footer font-small blue">
+ <footer class="page-footer font-small info-color">
     <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="#"> Jhon Tovar - Mauricio Garibello</a>
+      <a href="https://www.xhygnus.com/pweb/">Ing. Jhon Tovar & Ing. Mauricio Garibello</a>
     </div>
-  </footer> -->
+  </footer> 
   <!-- Footer -->

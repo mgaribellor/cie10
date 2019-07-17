@@ -346,7 +346,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.  scrolling-navbar, fixed-top  -->\r\n<mdb-navbar SideClass=\"navbar navbar-expand-lg navbar-dark bg-blue primary-color\" [containerInside]=\"true\">\r\n  <!-- <logo>\r\n      <a class=\"logo navbar-brand\" href=\"#\"><strong>Consultas</strong></a>\r\n  </logo> -->\r\n  <links>\r\n      <ul class=\"navbar-nav mr-auto\">\r\n          <!-- <li class=\"nav-item active waves-light\" mdbRippleRadius>\r\n              <a class=\"nav-link\" href=\"https://xhygnusnews.com/\">Home <span class=\"sr-only\">(current)</span></a>\r\n          </li> -->\r\n         <!--  <li class=\"nav-item waves-light\" mdbRippleRadius>\r\n              <a [routerLink]=\"['consultas/LiquidacionCx']\" class=\"nav-link\">LiquidacionCx</a>\r\n          </li>   --> \r\n          <li class=\"nav-item waves-light\" mdbRippleRadius>\r\n            <a [routerLink]=\"['consultas/LiquidacionCIE']\" class=\"nav-link\">CIE10</a>\r\n        </li>     \r\n      </ul>\r\n     <!--  <ul class=\"navbar-nav nav-flex-icons\">\r\n          <li class=\"nav-item waves-light\" mdbRippleRadius>\r\n              <a class=\"nav-link\"><i class=\"fa fa-facebook\"></i></a>\r\n          </li>\r\n          <li class=\"nav-item waves-light\" mdbRippleRadius>\r\n              <a class=\"nav-link\"><i class=\"fa fa-twitter\"></i></a>\r\n          </li>\r\n          <li class=\"nav-item waves-light\" mdbRippleRadius>\r\n              <a class=\"nav-link\"><i class=\"fa fa-instagram\"></i></a>\r\n          </li>\r\n      </ul> -->\r\n  </links>\r\n</mdb-navbar>\r\n<!-- Main -->\r\n<main>\r\n  <div class=\" mt-1\">\r\n        <div class=\"col-md-12\">\r\n            <router-outlet></router-outlet>\r\n        </div>\r\n    <!--Section: Features v.3-->\r\n    <!-- <section class=\"section feature-box pt-5\">   \r\n        <br>\r\n                 \r\n     \r\n    </section> -->\r\n    <!--Section: Features v.3-->\r\n  </div>\r\n</main>\r\n<!--Main Navigation-->\r\n\r\n<!-- Footer -->\r\n<!-- <footer class=\"page-footer font-small blue\">\r\n    <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:\r\n      <a href=\"#\"> Jhon Tovar - Mauricio Garibello</a>\r\n    </div>\r\n  </footer> -->\r\n  <!-- Footer -->"
+module.exports = "<!--The content below is only a placeholder and can be replaced.  scrolling-navbar, fixed-top -->\r\n<mdb-navbar SideClass=\"navbar navbar-expand-lg navbar-dark bg-blue info-color\" [containerInside]=\"true\">\r\n  <!-- <logo>\r\n      <a class=\"logo navbar-brand\" href=\"#\"><strong>Consulta Codigos Cie10 y demas terminos en salud</strong></a>\r\n  </logo>  -->\r\n  <links>\r\n      <ul class=\"navbar-nav mr-auto\">\r\n         <li class=\"nav-item active waves-effect waves-light btn\" mdbRippleRadius>\r\n              <a class=\"nav-link\" href=\"https://xhygnusnews.com/\">Inicio <span class=\"sr-only\">(current)</span></a>\r\n          </li> \r\n         <li class=\"nav-item waves-effect waves-light btn\" mdbRippleRadius>\r\n              <a [routerLink]=\"['consultas/LiquidacionCx']\" class=\"nav-link\">CONSULTA TARIFAS ISS2001</a>\r\n          </li>\r\n          <li class=\"nav-item waves-effect waves-light btn\" mdbRippleRadius>\r\n            <a [routerLink]=\"['consultas/LiquidacionCIE']\" class=\"nav-link\">CONSULTA CODIGOS CIE10</a>\r\n        </li>     \r\n      </ul>\r\n    <ul class=\"navbar-nav nav-flex-icons\">\r\n          <li class=\"nav-item waves-purple\" mdbRippleRadius>\r\n              <a class=\"nav-link\" href=\"https://www.facebook.com/mgaribellor\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a>\r\n          </li>\r\n          <li class=\"nav-item waves-purple\" mdbRippleRadius>\r\n              <a class=\"nav-link\" href=\"https://twitter.com/mgaribellor\" target=\"_blank\"><i class=\"fa fa-twitter\"></i></a>\r\n          </li>\r\n          <li class=\"nav-item waves-purple\" mdbRippleRadius>\r\n              <a class=\"nav-link\" href=\"https://www.instagram.com/mgaribellor/\" target=\"_blank\"><i class=\"fa fa-instagram\"></i></a>\r\n          </li>\r\n      </ul> \r\n  </links>\r\n</mdb-navbar>\r\n\r\n<div class=\"container-fluid\">\r\n    <main>\r\n        <div class=\" mt-1\">\r\n          <div class=\"col-md-12\">\r\n            \r\n           \r\n\r\n            <br>\r\n              <router-outlet></router-outlet>\r\n          </div>\r\n        </div>\r\n      </main>\r\n</div>\r\n<nav mat-tab-nav-bar>    \r\n <!--    <a mat-tab-link routerLinkActive #activeCIE=\"routerLinkActive\" [active]=\"activeCIE.isActive\"  [routerLink]=\"['consultas/LiquidacionCIE']\">CIE10</a>\r\n    <a mat-tab-link  routerLinkActive #activeISS=\"routerLinkActive\" [active]=\"activeISS.isActive\"  [routerLink]=\"['consultas/LiquidacionCx']\">ISS2001</a> -->\r\n  </nav>\r\n<!-- Main -->\r\n\r\n<!--Main Navigation-->\r\n\r\n<!-- Footer -->\r\n <footer class=\"page-footer font-small info-color\">\r\n    <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:\r\n      <a href=\"https://www.xhygnus.com/pweb/\">Ing. Jhon Tovar & Ing. Mauricio Garibello</a>\r\n    </div>\r\n  </footer> \r\n  <!-- Footer -->"
 
 /***/ }),
 
@@ -414,12 +414,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angular-bootstrap-md */ "./node_modules/angular-bootstrap-md/esm5/angular-bootstrap-md.es5.js");
 /* harmony import */ var _consultas_consultas_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./consultas/consultas.module */ "./src/app/consultas/consultas.module.ts");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/tabs */ "./node_modules/@angular/material/esm5/tabs.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -440,7 +442,8 @@ var AppModule = /** @class */ (function () {
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
                 angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["MDBBootstrapModule"].forRoot(),
-                _consultas_consultas_module__WEBPACK_IMPORTED_MODULE_6__["ConsultasModule"]
+                _consultas_consultas_module__WEBPACK_IMPORTED_MODULE_6__["ConsultasModule"],
+                _angular_material_tabs__WEBPACK_IMPORTED_MODULE_7__["MatTabsModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
@@ -486,7 +489,7 @@ var LiquidacionCIEService = /** @class */ (function () {
         this.host = host;
     }
     LiquidacionCIEService.prototype.search = function (query) {
-        var url = this.host.HOST + '/app/public/api/Cie10';
+        var url = this.host.HOST + '/api/Cie10';
         return this.http
             .get(url, {
             observe: 'response',
@@ -544,7 +547,7 @@ var LiquidacionCxServiceService = /** @class */ (function () {
         this.host = host;
     }
     LiquidacionCxServiceService.prototype.search = function (query) {
-        var url = this.host.HOST + '/app/public/api/iss2001';
+        var url = this.host.HOST + '/api/iss2001';
         return this.http
             .get(url, {
             observe: 'response',
@@ -663,9 +666,10 @@ var ConsultasModule = /** @class */ (function () {
                 _material_module__WEBPACK_IMPORTED_MODULE_6__["MaterialModule"]
             ],
             entryComponents: [
-                _liquidacion_cie_liquidacion_cie_component__WEBPACK_IMPORTED_MODULE_7__["DialogContentCIE"]
+                _liquidacion_cie_liquidacion_cie_component__WEBPACK_IMPORTED_MODULE_7__["DialogContentCIE"],
+                _liquidacion_cx_liquidacion_cx_component__WEBPACK_IMPORTED_MODULE_3__["DialogContentSIS2001"]
             ],
-            declarations: [_liquidacion_cx_liquidacion_cx_component__WEBPACK_IMPORTED_MODULE_3__["LiquidacionCxComponent"], _liquidacion_cie_liquidacion_cie_component__WEBPACK_IMPORTED_MODULE_7__["LiquidacionCIEComponent"], _liquidacion_cie_liquidacion_cie_component__WEBPACK_IMPORTED_MODULE_7__["DialogContentCIE"]]
+            declarations: [_liquidacion_cx_liquidacion_cx_component__WEBPACK_IMPORTED_MODULE_3__["LiquidacionCxComponent"], _liquidacion_cie_liquidacion_cie_component__WEBPACK_IMPORTED_MODULE_7__["LiquidacionCIEComponent"], _liquidacion_cie_liquidacion_cie_component__WEBPACK_IMPORTED_MODULE_7__["DialogContentCIE"], _liquidacion_cx_liquidacion_cx_component__WEBPACK_IMPORTED_MODULE_3__["DialogContentSIS2001"]]
         })
     ], ConsultasModule);
     return ConsultasModule;
@@ -682,7 +686,7 @@ var ConsultasModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 mat-dialog-title>CIE10</h2>\r\n<mat-dialog-content class=\"mat-typography\">\r\n  <h3>TABLA DE LA CLASIFICACIÓN ESTADÍSTICA INTERNACIONAL DE ENFERMEDADES Y PROBLEMAS RELACIONADOS CON LA SALUD</h3>\r\n  <p>\r\n      DECIMA REVISIÓN (CIE-10) PARA EL REGISTRO INDIVIDUAL DE PRESTACIONES DE SERVICIOS (RIPS) CON RESTRICCIONES DE SEXO, EDAD Y CODIGOS QUE NO SON AFECCIÓN PRINCIPAL\r\n  </p>\r\n\r\n  <h1>SIGLAS. SEXO:</h1>\r\n  <p>\r\n      <li>H= Válido solo para hombres</li>\r\n      <li>M= Válido solo para mujeres</li>\r\n      <li>A= Aplica para ambos sexos</li>\r\n  </p>\r\n\r\n  <h1>EDAD</h1>\r\n\r\n  <h3> <i>LIMITE INFERIOR</i></h3>\r\n\r\n  <p>Se refiere a la edad mínima aceptada para que ocurra el evento por dicha causa.</p>\r\n\r\n  <h3><i>LIMITE SUPERIOR </i></h3>\r\n\r\n  <p>Se refiere a la edad máxima aceptada para que ocurra el evento por dicha causa. </p>\r\n\r\n  <h1>Importante !!!</h1  >\r\n\r\n  <p>Para la interpretación de los LIMITES:\r\n    el primer dígito se refiere: \r\n    <li> 1 a horas</li>\r\n    <li> 2 a días</li>\r\n    <li> 3 a meses</li>\r\n    <li> 4 a años</li>\r\n    <li> y los dos siguientes dígitos corresponde a la edad</li>\r\n    <li> 000 significa que no hay restricción en edad mínima</li>\r\n    <li> 599 que no hay restricción en edad máxima</li>\r\n    <li> 0 que no hay restricción en edad</li>\r\n</p>\r\n\r\n \r\n</mat-dialog-content>\r\n<mat-dialog-actions align=\"end\">\r\n  <button mat-button mat-dialog-close>Cancel</button>\r\n  <button mat-button [mat-dialog-close]=\"true\" cdkFocusInitial >Ver mas</button>\r\n</mat-dialog-actions>\r\n"
+module.exports = "<h2 mat-dialog-title>CIE10</h2>\r\n<mat-dialog-content class=\"mat-typography\">\r\n  <h3>TABLA DE LA CLASIFICACIÓN ESTADÍSTICA INTERNACIONAL DE ENFERMEDADES Y PROBLEMAS RELACIONADOS CON LA SALUD</h3>\r\n  <p>\r\n      DECIMA REVISIÓN (CIE-10) PARA EL REGISTRO INDIVIDUAL DE PRESTACIONES DE SERVICIOS (RIPS) CON RESTRICCIONES DE SEXO, EDAD Y CODIGOS QUE NO SON AFECCIÓN PRINCIPAL\r\n  </p>\r\n\r\n  <h1>SIGLAS. SEXO:</h1>\r\n  <p>\r\n      <li>H= Válido solo para hombres</li>\r\n      <li>M= Válido solo para mujeres</li>\r\n      <li>A= Aplica para ambos sexos</li>\r\n  </p>\r\n\r\n  <h1>EDAD</h1>\r\n\r\n  <h3> <i>LIMITE INFERIOR</i></h3>\r\n\r\n  <p>Se refiere a la edad mínima aceptada para que ocurra el evento por dicha causa.</p>\r\n\r\n  <h3><i>LIMITE SUPERIOR </i></h3>\r\n\r\n  <p>Se refiere a la edad máxima aceptada para que ocurra el evento por dicha causa. </p>\r\n\r\n  <h1>Importante !!!</h1  >\r\n\r\n  <p>Para la interpretación de los LIMITES:\r\n    el primer dígito se refiere: \r\n    <li> 1 a horas</li>\r\n    <li> 2 a días</li>\r\n    <li> 3 a meses</li>\r\n    <li> 4 a años</li>\r\n    <li> y los dos siguientes dígitos corresponde a la edad</li>\r\n    <li> 000 significa que no hay restricción en edad mínima</li>\r\n    <li> 599 que no hay restricción en edad máxima</li>\r\n    <li> 0 que no hay restricción en edad</li>\r\n</p>\r\n\r\n \r\n</mat-dialog-content>\r\n<mat-dialog-actions align=\"end\">\r\n  <button mat-button mat-dialog-close>Cancel</button>\r\n  <button mat-button [mat-dialog-close]=\"true\" cdkFocusInitial \r\n  onClick=\"window.open('https://xhygnusnews.com/blog/2018/12/16/cie_10/')\">Ver mas</button>\r\n</mat-dialog-actions>\r\n"
 
 /***/ }),
 
@@ -693,7 +697,7 @@ module.exports = "<h2 mat-dialog-title>CIE10</h2>\r\n<mat-dialog-content class=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-12\">\r\n  <div class=\"row\">\r\n    \r\n    <div class=\"col-md-11\">\r\n      <mat-form-field class=\"example-full-width\">\r\n        <input [formControl]=\"autoCompleteControl\" type=\"text\" placeholder=\"Ingrese el Còdigo o Descripciòn\" aria-label=\"Number\" matInput\r\n          [matAutocomplete]=\"auto\">\r\n        <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\r\n          <mat-option *ngFor=\"let item of _serviceAutocomplete$ | async\" [value]=\"item.name\" (onSelectionChange)=\"selectionChange(item)\">\r\n            {{ item.name | titlecase}}\r\n          </mat-option>\r\n        </mat-autocomplete>\r\n      </mat-form-field>\r\n\r\n    </div>\r\n    <div class=\"col-md-1 mt-2\">           \r\n      <mat-icon (click)=\"openDialog()\">help</mat-icon>        \r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"mat-elevation-z8 responsive_table example-container\">\r\n      <!--   <div class=\"example-loading-shade\"\r\n               *ngIf=\"isLoadingResults || isRateLimitReached\">\r\n            <mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner>\r\n            <div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">\r\n              GitHub's API rate limit has been reached. It will be reset in one minute.\r\n            </div>\r\n          </div> -->\r\n\r\n      <mat-table #table [dataSource]=\"dataSource\" matSort matSortDisableClear matSortDirection=\"asc\">\r\n\r\n          <ng-container matColumnDef=\"select\">\r\n              <th mat-header-cell *matHeaderCellDef>\r\n                <mat-checkbox (change)=\"$event ? masterToggle() : null\"\r\n                              [checked]=\"selection.hasValue() && isAllSelected()\"\r\n                              [indeterminate]=\"selection.hasValue() && !isAllSelected()\">\r\n                </mat-checkbox>\r\n              </th>\r\n              <td mat-cell *matCellDef=\"let row\">\r\n                <mat-checkbox (click)=\"$event.stopPropagation();\"\r\n                              (change)=\"$event ? selection.toggle(row) : null\"\r\n                              [checked]=\"selection.isSelected(row)\">\r\n                </mat-checkbox>\r\n              </td>\r\n            </ng-container>\r\n\r\n        <ng-container matColumnDef=\"cod\">\r\n          <mat-header-cell *matHeaderCellDef>Codigo</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.cod }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"name\">\r\n          <mat-header-cell *matHeaderCellDef>Descripciòn</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.name }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"limsuperior\">\r\n          <mat-header-cell *matHeaderCellDef>Lim Superior</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.limsuperior }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"liminferior\">\r\n          <mat-header-cell *matHeaderCellDef>Lim Inferior</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.liminferior }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"sexo\">\r\n          <mat-header-cell *matHeaderCellDef>Sexo</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.sexo }}</mat-cell>\r\n        </ng-container>\r\n\r\n\r\n        <mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: true\"></mat-header-row>\r\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\r\n      </mat-table>\r\n\r\n\r\n    </div>\r\n\r\n  </div>\r\n \r\n  <br>\r\n</div>"
+module.exports = "<div class=\"col-md-12\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-md-11\">\r\n        <h3>Consulta de códigos CIE10 (\"Clasificación Internacional de Enfermedades\")</h3>\r\n      <mat-form-field class=\"example-full-width\">\r\n          \r\n\r\n        <input [formControl]=\"autoCompleteControl\" type=\"text\" placeholder=\"Ingrese el Código o Descripción\" aria-label=\"Number\"\r\n          matInput [matAutocomplete]=\"auto\">\r\n        <button mat-button *ngIf=\"autoCompleteControl.value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"autoCompleteControl.setValue(null,{emitEvent: false})\">\r\n          <mat-icon>close</mat-icon>\r\n        </button>\r\n        <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\r\n          <mat-option *ngFor=\"let item of _serviceAutocomplete$ | async\" [value]=\"item.name\" (onSelectionChange)=\"selectionChange(item)\">\r\n            {{ item.name | titlecase}}\r\n          </mat-option>\r\n        </mat-autocomplete>\r\n      </mat-form-field>\r\n\r\n    </div>\r\n    <div class=\"col-md-1 mt-2\">\r\n      <mat-icon (click)=\"openDialog()\">help</mat-icon>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"mat-elevation-z8 responsive_table example-container\">\r\n      <!--   <div class=\"example-loading-shade\"\r\n               *ngIf=\"isLoadingResults || isRateLimitReached\">\r\n            <mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner>\r\n            <div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">\r\n              GitHub's API rate limit has been reached. It will be reset in one minute.\r\n            </div>\r\n          </div> -->\r\n\r\n      <mat-table #table [dataSource]=\"dataSource\" matSort matSortDisableClear matSortDirection=\"asc\">\r\n\r\n        <ng-container matColumnDef=\"select\">\r\n          <th mat-header-cell *matHeaderCellDef>\r\n            <mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"selection.hasValue() && isAllSelected()\"\r\n              [indeterminate]=\"selection.hasValue() && !isAllSelected()\">\r\n            </mat-checkbox>\r\n          </th>\r\n          <td mat-cell *matCellDef=\"let row\">\r\n            <mat-checkbox (click)=\"$event.stopPropagation();\" (change)=\"$event ? selection.toggle(row) : null\"\r\n              [checked]=\"selection.isSelected(row)\">\r\n            </mat-checkbox>\r\n          </td>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"cod\">\r\n          <mat-header-cell *matHeaderCellDef>Código</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Código:</span> {{ row.cod }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"name\">\r\n          <mat-header-cell *matHeaderCellDef>Descripción</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Descripción:</span>{{ row.name }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"limsuperior\">\r\n          <mat-header-cell *matHeaderCellDef>Lim Superior</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Lim Superior:</span>{{ row.limsuperior }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"liminferior\">\r\n          <mat-header-cell *matHeaderCellDef>Lim Inferior</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Lim Inferior:</span>{{ row.liminferior }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"sexo\">\r\n          <mat-header-cell *matHeaderCellDef>Sexo</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Sexo:</span>{{ row.sexo }}</mat-cell>\r\n        </ng-container>\r\n\r\n\r\n        <mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: true\"></mat-header-row>\r\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\r\n      </mat-table>\r\n\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -704,7 +708,7 @@ module.exports = "<div class=\"col-md-12\">\r\n  <div class=\"row\">\r\n    \r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-full-width {\n  width: 100%; }\n\n.example-container {\n  height: 400px;\n  overflow: auto; }\n\n.mat-column-name {\n  flex: 0 0 40%; }\n\n.mat-elevation-z8 {\n  width: 100%; }\n\n@media (max-width: 600px) {\n  .mobile-label {\n    width: 80px;\n    display: inline-block;\n    font-weight: bold; }\n  .mat-header-row {\n    display: none; }\n  .mat-row {\n    flex-direction: column;\n    align-items: start;\n    padding: 8px 24px; }\n  .responsive_table {\n    overflow-x: auto !important; } }\n"
+module.exports = ".example-full-width {\n  width: 100%; }\n\n.example-container {\n  height: 400px;\n  overflow: auto; }\n\n.mat-column-name {\n  flex: 0 0 40%; }\n\n.mat-elevation-z8 {\n  width: 100%; }\n\n.mobile-label {\n  display: none; }\n\n@media (max-width: 600px) {\n  .mat-header-row {\n    display: none; }\n  .mat-row {\n    flex-direction: column;\n    align-items: start;\n    padding: 8px 24px; }\n  .responsive_table {\n    overflow-x: auto !important; }\n  .mat-cell:first-of-type {\n    padding-left: initial; }\n  .mobile-label {\n    width: 80px;\n    display: inline-block;\n    font-weight: bold;\n    margin-right: 1%; } }\n"
 
 /***/ }),
 
@@ -730,8 +734,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_internal_observable_of__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/internal/observable/of */ "./node_modules/rxjs/internal/observable/of.js");
 /* harmony import */ var rxjs_internal_observable_of__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_observable_of__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/cdk/collections */ "./node_modules/@angular/cdk/esm5/collections.es5.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -750,14 +753,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var LiquidacionCIEComponent = /** @class */ (function () {
-    function LiquidacionCIEComponent(_service, http, dialog) {
+    function LiquidacionCIEComponent(_service, dialog) {
         this._service = _service;
-        this.http = http;
         this.dialog = dialog;
         this.displayedColumns = ['cod', 'name', 'liminferior', 'limsuperior', 'sexo'];
-        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_9__["MatTableDataSource"]();
+        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatTableDataSource"]();
         this._serviceAutocomplete$ = null;
         this.autoCompleteControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]();
         this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_7__["SelectionModel"](true, []);
@@ -781,12 +782,13 @@ var LiquidacionCIEComponent = /** @class */ (function () {
                 return Object(rxjs_internal_observable_of__WEBPACK_IMPORTED_MODULE_6__["of"])(null);
             }
         }));
+        console.log(this.autoCompleteControl);
     };
     LiquidacionCIEComponent.prototype.selectionChange = function (item) {
-        this.element = this.dataSource.data;
+        /* this.element = this.dataSource.data;
         this.element.filter(function (element) {
-            return element.cod == item.cod;
-        });
+          this.dataSource.data.splice( this.dataSource.data.indexOf(element), 1 );
+        }); */
         this.dataSource.data.push(item);
         this.dataSource.filter = "";
     };
@@ -802,7 +804,7 @@ var LiquidacionCIEComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./liquidacion-cie.component.html */ "./src/app/consultas/liquidacion-cie/liquidacion-cie.component.html"),
             styles: [__webpack_require__(/*! ./liquidacion-cie.component.scss */ "./src/app/consultas/liquidacion-cie/liquidacion-cie.component.scss")]
         }),
-        __metadata("design:paramtypes", [_Service_liquidacion_cie_service__WEBPACK_IMPORTED_MODULE_2__["LiquidacionCIEService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClient"], _angular_material__WEBPACK_IMPORTED_MODULE_9__["MatDialog"]])
+        __metadata("design:paramtypes", [_Service_liquidacion_cie_service__WEBPACK_IMPORTED_MODULE_2__["LiquidacionCIEService"], _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatDialog"]])
     ], LiquidacionCIEComponent);
     return LiquidacionCIEComponent;
 }());
@@ -823,6 +825,17 @@ var DialogContentCIE = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/consultas/liquidacion-cx/dialog/dialog-content-SIS2001.html":
+/*!*****************************************************************************!*\
+  !*** ./src/app/consultas/liquidacion-cx/dialog/dialog-content-SIS2001.html ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h2 mat-dialog-title>Iss2001</h2>\r\n<mat-dialog-content class=\"mat-typography\">\r\n  <h3>ACUERDO No. 256 DE  2.001</h3>\r\n  <p>\r\n        POR EL CUAL SE APRUEBA EL \"MANUAL DE TARIFAS\" DE LA ENTIDAD PROMOTORA DE SALUD DEL SEGURO SOCIAL “EPS-ISS”.\r\n  </p>\r\n\r\n  <p>\r\n        Que el Instituto de Seguros Sociales, de conformidad con lo dispuesto en el numeral 3 del Artículo 3º del Decreto 2148 de 1992 debe garantizar a sus afiliados y beneficiarios la prestación de los servicios médico asistenciales integrales que por ley le corresponden, mediante acciones de prevención, curación y rehabilitación.\r\n  </p>\r\n\r\n  \r\n\r\n \r\n</mat-dialog-content>\r\n<mat-dialog-actions align=\"end\">\r\n  <button mat-button mat-dialog-close>Cerrar</button>\r\n \r\n</mat-dialog-actions>\r\n"
+
+/***/ }),
+
 /***/ "./src/app/consultas/liquidacion-cx/liquidacion-cx.component.html":
 /*!************************************************************************!*\
   !*** ./src/app/consultas/liquidacion-cx/liquidacion-cx.component.html ***!
@@ -830,7 +843,7 @@ var DialogContentCIE = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-12\">\r\n  <div class=\"row\">\r\n    \r\n    <div class=\"col-md-9\">\r\n\r\n      <mat-form-field class=\"example-full-width\">\r\n        <input [formControl]=\"autoCompleteControl\" type=\"text\" placeholder=\"Còdigo\" aria-label=\"Number\" matInput\r\n          [matAutocomplete]=\"auto\">\r\n        <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\r\n          <mat-option *ngFor=\"let item of _serviceAutoComplete$ | async\" [value]=\"item.nombre\" (onSelectionChange)=\"selectionChange(item)\">\r\n            {{ item.nombre | titlecase}}\r\n          </mat-option>\r\n        </mat-autocomplete>\r\n      </mat-form-field>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-md-3\">\r\n      <mat-form-field class=\"example-full-width\">\r\n        <input matInput placeholder=\"Porcentaje %\" [(ngModel)]=\"model\" type=\"number\" value=\"0\" \r\n        (blur)=\"onBlurMethod()\">\r\n      </mat-form-field>\r\n    </div>\r\n\r\n  </div>\r\n  <div class=\"row\" [hidden]=\"!showTable\">\r\n    <div class=\"mat-elevation-z8 responsive_table example-container\">\r\n      <!--   <div class=\"example-loading-shade\"\r\n               *ngIf=\"isLoadingResults || isRateLimitReached\">\r\n            <mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner>\r\n            <div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">\r\n              GitHub's API rate limit has been reached. It will be reset in one minute.\r\n            </div>\r\n          </div> -->\r\n\r\n      <mat-table #table [dataSource]=\"dataSource\" matSort matSortDisableClear matSortDirection=\"asc\">\r\n\r\n          <ng-container matColumnDef=\"select\">\r\n              <th mat-header-cell *matHeaderCellDef>\r\n                <mat-checkbox (change)=\"$event ? masterToggle() : null\"\r\n                              [checked]=\"selection.hasValue() && isAllSelected()\"\r\n                              [indeterminate]=\"selection.hasValue() && !isAllSelected()\">\r\n                </mat-checkbox>\r\n              </th>\r\n              <td mat-cell *matCellDef=\"let row\">\r\n                <mat-checkbox (click)=\"$event.stopPropagation();\"\r\n                              (change)=\"$event ? selection.toggle(row) : null\"\r\n                              [checked]=\"selection.isSelected(row)\">\r\n                </mat-checkbox>\r\n              </td>\r\n            </ng-container>\r\n\r\n        <ng-container matColumnDef=\"cod\">\r\n          <mat-header-cell *matHeaderCellDef>Codigo</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.cod }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"nom\">\r\n          <mat-header-cell *matHeaderCellDef>Descripciòn</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.nom }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"ane\">\r\n          <mat-header-cell *matHeaderCellDef>Anestesia</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.ane | currency }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"ayu\">\r\n          <mat-header-cell *matHeaderCellDef>Ayudantia</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.ayu }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"cap\">\r\n          <mat-header-cell *matHeaderCellDef>Capitulo</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.cap }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"des\">\r\n          <mat-header-cell *matHeaderCellDef>Sala</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.des }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"hom\">\r\n          <mat-header-cell *matHeaderCellDef>hom</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.hom }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"mat\">\r\n          <mat-header-cell *matHeaderCellDef>Materiales</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.mat }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"tot\">\r\n          <mat-header-cell *matHeaderCellDef>Valor</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.tot  | currency }}</mat-cell>\r\n        </ng-container>\r\n        <ng-container matColumnDef=\"uvr\">\r\n          <mat-header-cell *matHeaderCellDef>UVR</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\">{{ row.uvr }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: true\"></mat-header-row>\r\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\r\n      </mat-table>\r\n\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <br>\r\n</div>"
+module.exports = "<div class=\"col-md-12\">\r\n  <div class=\"row\">\r\n      <h3>Consulta de tarifas ISS2001 </h3>\r\n    <div class=\"col-md-10\">\r\n     \r\n      <mat-form-field class=\"example-full-width\">\r\n        <input [formControl]=\"autoCompleteControl\" type=\"text\" placeholder=\"Ingrese el Código o Descripción\" aria-label=\"Number\"\r\n          matInput [matAutocomplete]=\"auto\">\r\n        <button mat-button *ngIf=\"autoCompleteControl.value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"autoCompleteControl.setValue(null,{emitEvent: false})\">\r\n          <mat-icon>close</mat-icon>\r\n        </button>\r\n        <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\r\n          <mat-option *ngFor=\"let item of _serviceAutoComplete$ | async\" [value]=\"item.nombre\" (onSelectionChange)=\"selectionChange(item)\">\r\n            {{ item.nombre | titlecase}}\r\n          </mat-option>\r\n        </mat-autocomplete>\r\n      </mat-form-field>\r\n\r\n    </div>\r\n\r\n    <div class=\"col-md-2\">\r\n      <mat-form-field class=\"example-full-width\">\r\n        <input matInput placeholder=\"%\" [(ngModel)]=\"model\" type=\"number\" value=\"0\" (blur)=\"onBlurMethod()\">\r\n      </mat-form-field>\r\n    </div>\r\n    <div class=\"col-md-1 mt-2\">\r\n      <mat-icon (click)=\"openDialog()\">help</mat-icon>\r\n    </div>\r\n\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"mat-elevation-z8 responsive_table example-container\">\r\n      <!--   <div class=\"example-loading-shade\"\r\n               *ngIf=\"isLoadingResults || isRateLimitReached\">\r\n            <mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner>\r\n            <div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">\r\n              GitHub's API rate limit has been reached. It will be reset in one minute.\r\n            </div>\r\n          </div> -->\r\n\r\n      <mat-table #table [dataSource]=\"dataSource\" matSort matSortDisableClear matSortDirection=\"asc\">\r\n\r\n        <!--   <ng-container matColumnDef=\"select\">\r\n              <th mat-header-cell *matHeaderCellDef>\r\n                <mat-checkbox (change)=\"$event ? masterToggle() : null\"\r\n                              [checked]=\"selection.hasValue() && isAllSelected()\"\r\n                              [indeterminate]=\"selection.hasValue() && !isAllSelected()\">\r\n                </mat-checkbox>\r\n              </th>\r\n              <td mat-cell *matCellDef=\"let row\">\r\n                <mat-checkbox (click)=\"$event.stopPropagation();\"\r\n                              (change)=\"$event ? selection.toggle(row) : null\"\r\n                              [checked]=\"selection.isSelected(row)\">\r\n                </mat-checkbox>\r\n              </td>\r\n            </ng-container> -->\r\n\r\n        <ng-container matColumnDef=\"cod\">\r\n          <mat-header-cell *matHeaderCellDef>Código</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Código:</span> {{ row.cod }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"nom\">\r\n          <mat-header-cell *matHeaderCellDef>Descripción</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Descripción:</span> {{ row.nom }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"ane\">\r\n          <mat-header-cell *matHeaderCellDef>Anestesia</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Anestesia:</span> {{ row.ane }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"ayu\">\r\n          <mat-header-cell *matHeaderCellDef>Ayudantìa</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Ayudantìa:</span> {{ row.ayu }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"cap\">\r\n          <mat-header-cell *matHeaderCellDef>Capitulo</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Capitulo:</span>{{ row.cap }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"des\">\r\n          <mat-header-cell *matHeaderCellDef>Sala</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Capitulo:</span>{{ row.des }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"hom\">\r\n          <mat-header-cell *matHeaderCellDef>Honorario</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Sala:</span>{{ row.hom }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"mat\">\r\n          <mat-header-cell *matHeaderCellDef>Materiales</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Materiales:</span>{{ row.mat }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <ng-container matColumnDef=\"tot\">\r\n          <mat-header-cell *matHeaderCellDef>Total</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">Total:</span>{{ row.tot | currency }}</mat-cell>\r\n        </ng-container>\r\n        <ng-container matColumnDef=\"uvr\">\r\n          <mat-header-cell *matHeaderCellDef>UVR</mat-header-cell>\r\n          <mat-cell *matCellDef=\"let row\"><span class=\"mobile-label\">UVR:</span>{{ row.uvr }}</mat-cell>\r\n        </ng-container>\r\n\r\n        <mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: true\"></mat-header-row>\r\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\r\n      </mat-table>\r\n\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <br>\r\n  <!-- [hidden]=\"!showTable\" -->\r\n</div>"
 
 /***/ }),
 
@@ -841,7 +854,7 @@ module.exports = "<div class=\"col-md-12\">\r\n  <div class=\"row\">\r\n    \r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".example-full-width {\n  width: 100%; }\n\n.example-container {\n  height: 400px;\n  overflow: auto; }\n\n.mat-column-nom {\n  flex: 0 0 30%; }\n\n.mat-elevation-z8 {\n  width: 100%; }\n\n@media (max-width: 600px) {\n  .mobile-label {\n    width: 80px;\n    display: inline-block;\n    font-weight: bold; }\n  .mat-header-row {\n    display: none; }\n  .mat-row {\n    flex-direction: column;\n    align-items: start;\n    padding: 8px 24px; }\n  .responsive_table {\n    overflow-x: auto !important; } }\n"
+module.exports = ".example-full-width {\n  width: 100%; }\n\n.example-container {\n  height: 400px;\n  overflow: auto; }\n\n.mat-column-nom {\n  flex: 0 0 30%; }\n\n.mat-elevation-z8 {\n  width: 100%; }\n\n.mobile-label {\n  display: none; }\n\n@media (max-width: 600px) {\n  .mobile-label {\n    width: 80px;\n    display: inline-block;\n    font-weight: bold; }\n  .mat-header-row {\n    display: none; }\n  .mat-row {\n    flex-direction: column;\n    align-items: start;\n    padding: 8px 24px; }\n  .responsive_table {\n    overflow-x: auto !important; } }\n"
 
 /***/ }),
 
@@ -849,19 +862,19 @@ module.exports = ".example-full-width {\n  width: 100%; }\n\n.example-container 
 /*!**********************************************************************!*\
   !*** ./src/app/consultas/liquidacion-cx/liquidacion-cx.component.ts ***!
   \**********************************************************************/
-/*! exports provided: LiquidacionCxComponent */
+/*! exports provided: LiquidacionCxComponent, DialogContentSIS2001 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LiquidacionCxComponent", function() { return LiquidacionCxComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DialogContentSIS2001", function() { return DialogContentSIS2001; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _Service_liquidacion_cx_service_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Service/liquidacion-cx-service.service */ "./src/app/consultas/Service/liquidacion-cx-service.service.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/cdk/collections */ "./node_modules/@angular/cdk/esm5/collections.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -877,17 +890,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var LiquidacionCxComponent = /** @class */ (function () {
-    function LiquidacionCxComponent(_service) {
+    function LiquidacionCxComponent(_service, dialog) {
         this._service = _service;
-        //name headers table
-        this.displayedColumns = ['select', 'cod', 'nom', 'ane', 'ayu', 'cap', 'des', 'hom', 'mat', 'tot', 'uvr'];
+        this.dialog = dialog;
+        //name headers table : 'select',
+        this.displayedColumns = ['cod', 'nom', 'uvr', 'cap', 'hom', 'ane', 'ayu', 'des', 'mat', 'tot'];
         this._serviceAutoComplete$ = null;
         this.autoCompleteControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]();
         this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatTableDataSource"]();
-        this.elementOld = [];
-        this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_6__["SelectionModel"](true, []);
     }
     LiquidacionCxComponent.prototype.lookup = function (value) {
         return this._service.search(value.toLowerCase()).pipe(
@@ -910,34 +921,30 @@ var LiquidacionCxComponent = /** @class */ (function () {
             }
         }));
     };
-    /** Selects all rows if they are not all selected; otherwise clear selection. */
-    LiquidacionCxComponent.prototype.isAllSelected = function () {
-        var numSelected = this.selection.selected.length;
-        var numRows = this.dataSource.data.length;
-        return numSelected === numRows;
-    };
-    LiquidacionCxComponent.prototype.masterToggle = function () {
-        var _this = this;
-        this.isAllSelected() ?
-            this.selection.clear() :
-            this.dataSource.data.forEach(function (row) { return _this.selection.select(); });
-    };
     LiquidacionCxComponent.prototype.selectionChange = function (item) {
         this.showTable = true;
-        this.element = this.dataSource.data;
-        this.element.filter(function (element) {
-            return element.cod == item.cod;
-        });
         this.dataSource.data.push(item);
-        this.elementOld.push(item);
+        this.element = this.dataSource.data;
+        /*    this.element.filter(function (element) {
+              this.dataSource.data.splice( this.dataSource.data.indexOf(element), 1 );
+            });    */
         this.dataSource.filter = "";
     };
     LiquidacionCxComponent.prototype.onBlurMethod = function () {
         var _this = this;
-        this.element = this.elementOld;
+        if (this.model === null || this.model === undefined || this.element === undefined) {
+            this.model = 0;
+        }
         this.element.map(function (e) {
-            e.tot = e.tot * (_this.model / 100);
+            var valor = (e.vlr * (_this.model / 100));
+            e.tot = valor + parseFloat(e.vlr);
             return e;
+        });
+    };
+    LiquidacionCxComponent.prototype.openDialog = function () {
+        var dialogRef = this.dialog.open(DialogContentSIS2001);
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log("Dialog result: " + result);
         });
     };
     __decorate([
@@ -954,9 +961,21 @@ var LiquidacionCxComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./liquidacion-cx.component.html */ "./src/app/consultas/liquidacion-cx/liquidacion-cx.component.html"),
             styles: [__webpack_require__(/*! ./liquidacion-cx.component.scss */ "./src/app/consultas/liquidacion-cx/liquidacion-cx.component.scss")]
         }),
-        __metadata("design:paramtypes", [_Service_liquidacion_cx_service_service__WEBPACK_IMPORTED_MODULE_1__["LiquidacionCxServiceService"]])
+        __metadata("design:paramtypes", [_Service_liquidacion_cx_service_service__WEBPACK_IMPORTED_MODULE_1__["LiquidacionCxServiceService"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatDialog"]])
     ], LiquidacionCxComponent);
     return LiquidacionCxComponent;
+}());
+
+var DialogContentSIS2001 = /** @class */ (function () {
+    function DialogContentSIS2001() {
+    }
+    DialogContentSIS2001 = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'dialog-content-SIS2001',
+            template: __webpack_require__(/*! ./dialog/dialog-content-SIS2001.html */ "./src/app/consultas/liquidacion-cx/dialog/dialog-content-SIS2001.html"),
+        })
+    ], DialogContentSIS2001);
+    return DialogContentSIS2001;
 }());
 
 
@@ -1083,7 +1102,8 @@ var AppSettings = /** @class */ (function () {
         this.Version = 1;
         this.Autor = 'Jhon Tovar';
         this.Date = 'Diciembre 2018';
-        this.HOST = 'https://xhygnusnews.com';
+        //public HOST = 'https://xhygnusnews.com'; 
+        this.HOST = 'https://apiblog.azurewebsites.net/';
     }
     AppSettings = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
