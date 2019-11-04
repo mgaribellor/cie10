@@ -1,41 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.  scrolling-navbar, fixed-top -->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-blue info-color" [containerInside]="true">
-  <!-- <logo>
-      <a class="logo navbar-brand" href="#"><strong>Consulta Codigos Cie10 y demas terminos en salud</strong></a>
-  </logo>  -->
-  <links>
-      <ul class="navbar-nav mr-auto">
-         <li class="nav-item active waves-effect waves-light btn" mdbRippleRadius>
-              <a class="nav-link" href="https://xhygnusnews.com/">Inicio <span class="sr-only">(current)</span></a>
-          </li> 
-         <li class="nav-item waves-effect waves-light btn" mdbRippleRadius>
-              <a [routerLink]="['consultas/LiquidacionCx']" class="nav-link">CONSULTA TARIFAS ISS2001</a>
-          </li>
-          <li class="nav-item waves-effect waves-light btn" mdbRippleRadius>
-            <a [routerLink]="['consultas/LiquidacionCIE']" class="nav-link">CONSULTA CODIGOS CIE10</a>
-        </li>     
-      </ul>
-    <ul class="navbar-nav nav-flex-icons">
-          <li class="nav-item waves-purple" mdbRippleRadius>
-              <a class="nav-link" href="https://www.facebook.com/mgaribellor" target="_blank"><i class="fa fa-facebook"></i></a>
-          </li>
-          <li class="nav-item waves-purple" mdbRippleRadius>
-              <a class="nav-link" href="https://twitter.com/mgaribellor" target="_blank"><i class="fa fa-twitter"></i></a>
-          </li>
-          <li class="nav-item waves-purple" mdbRippleRadius>
-              <a class="nav-link" href="https://www.instagram.com/mgaribellor/" target="_blank"><i class="fa fa-instagram"></i></a>
-          </li>
-      </ul> 
-  </links>
-</mdb-navbar>
+
+<body>
+  
 
 <div class="container-fluid">
     <main>
         <div class=" mt-1">
           <div class="col-md-12">
             
-           
-
             <br>
               <router-outlet></router-outlet>
           </div>
@@ -49,11 +21,11 @@
 <!-- Main -->
 
 <!--Main Navigation-->
-
+</body>
 <!-- Footer -->
  <footer class="page-footer font-small info-color">
     <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://www.xhygnus.com/pweb/">Ing. Jhon Tovar & Ing. Mauricio Garibello</a>
+      <a target='_blank' href="https://www.xhygnus.com/pweb/">Ing. Jhon Tovar & Ing. Mauricio Garibello</a>
     </div>
   </footer> 
   <!-- Footer -->

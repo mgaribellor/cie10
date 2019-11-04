@@ -8,6 +8,7 @@ export class AppSettings  {
     public Autor = 'Jhon Tovar';
     public Date  = 'Diciembre 2018';  
     //public HOST = 'https://xhygnusnews.com'; 
-    public HOST = 'https://apiblog.azurewebsites.net/'; 
-      
+   // public HOST = 'http://apimedical-env.bdsajwt7b4.us-east-2.elasticbeanstalk.com/api/'; 
+   public HOST = 'https://apitest.sador.com.co/api/'; 
+    
 }

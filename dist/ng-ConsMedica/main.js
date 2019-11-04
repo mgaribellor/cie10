@@ -346,7 +346,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.  scrolling-navbar, fixed-top -->\r\n<mdb-navbar SideClass=\"navbar navbar-expand-lg navbar-dark bg-blue info-color\" [containerInside]=\"true\">\r\n  <!-- <logo>\r\n      <a class=\"logo navbar-brand\" href=\"#\"><strong>Consulta Codigos Cie10 y demas terminos en salud</strong></a>\r\n  </logo>  -->\r\n  <links>\r\n      <ul class=\"navbar-nav mr-auto\">\r\n         <li class=\"nav-item active waves-effect waves-light btn\" mdbRippleRadius>\r\n              <a class=\"nav-link\" href=\"https://xhygnusnews.com/\">Inicio <span class=\"sr-only\">(current)</span></a>\r\n          </li> \r\n         <li class=\"nav-item waves-effect waves-light btn\" mdbRippleRadius>\r\n              <a [routerLink]=\"['consultas/LiquidacionCx']\" class=\"nav-link\">CONSULTA TARIFAS ISS2001</a>\r\n          </li>\r\n          <li class=\"nav-item waves-effect waves-light btn\" mdbRippleRadius>\r\n            <a [routerLink]=\"['consultas/LiquidacionCIE']\" class=\"nav-link\">CONSULTA CODIGOS CIE10</a>\r\n        </li>     \r\n      </ul>\r\n    <ul class=\"navbar-nav nav-flex-icons\">\r\n          <li class=\"nav-item waves-purple\" mdbRippleRadius>\r\n              <a class=\"nav-link\" href=\"https://www.facebook.com/mgaribellor\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a>\r\n          </li>\r\n          <li class=\"nav-item waves-purple\" mdbRippleRadius>\r\n              <a class=\"nav-link\" href=\"https://twitter.com/mgaribellor\" target=\"_blank\"><i class=\"fa fa-twitter\"></i></a>\r\n          </li>\r\n          <li class=\"nav-item waves-purple\" mdbRippleRadius>\r\n              <a class=\"nav-link\" href=\"https://www.instagram.com/mgaribellor/\" target=\"_blank\"><i class=\"fa fa-instagram\"></i></a>\r\n          </li>\r\n      </ul> \r\n  </links>\r\n</mdb-navbar>\r\n\r\n<div class=\"container-fluid\">\r\n    <main>\r\n        <div class=\" mt-1\">\r\n          <div class=\"col-md-12\">\r\n            \r\n           \r\n\r\n            <br>\r\n              <router-outlet></router-outlet>\r\n          </div>\r\n        </div>\r\n      </main>\r\n</div>\r\n<nav mat-tab-nav-bar>    \r\n <!--    <a mat-tab-link routerLinkActive #activeCIE=\"routerLinkActive\" [active]=\"activeCIE.isActive\"  [routerLink]=\"['consultas/LiquidacionCIE']\">CIE10</a>\r\n    <a mat-tab-link  routerLinkActive #activeISS=\"routerLinkActive\" [active]=\"activeISS.isActive\"  [routerLink]=\"['consultas/LiquidacionCx']\">ISS2001</a> -->\r\n  </nav>\r\n<!-- Main -->\r\n\r\n<!--Main Navigation-->\r\n\r\n<!-- Footer -->\r\n <footer class=\"page-footer font-small info-color\">\r\n    <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:\r\n      <a href=\"https://www.xhygnus.com/pweb/\">Ing. Jhon Tovar & Ing. Mauricio Garibello</a>\r\n    </div>\r\n  </footer> \r\n  <!-- Footer -->"
+module.exports = "<!--The content below is only a placeholder and can be replaced.  scrolling-navbar, fixed-top -->\r\n\r\n<body>\r\n  \r\n\r\n<div class=\"container-fluid\">\r\n    <main>\r\n        <div class=\" mt-1\">\r\n          <div class=\"col-md-12\">\r\n            \r\n            <br>\r\n              <router-outlet></router-outlet>\r\n          </div>\r\n        </div>\r\n      </main>\r\n</div>\r\n<nav mat-tab-nav-bar>    \r\n <!--    <a mat-tab-link routerLinkActive #activeCIE=\"routerLinkActive\" [active]=\"activeCIE.isActive\"  [routerLink]=\"['consultas/LiquidacionCIE']\">CIE10</a>\r\n    <a mat-tab-link  routerLinkActive #activeISS=\"routerLinkActive\" [active]=\"activeISS.isActive\"  [routerLink]=\"['consultas/LiquidacionCx']\">ISS2001</a> -->\r\n  </nav>\r\n<!-- Main -->\r\n\r\n<!--Main Navigation-->\r\n</body>\r\n<!-- Footer -->\r\n <footer class=\"page-footer font-small info-color\">\r\n    <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:\r\n      <a target='_blank' href=\"https://www.xhygnus.com/pweb/\">Ing. Jhon Tovar & Ing. Mauricio Garibello</a>\r\n    </div>\r\n  </footer> \r\n  <!-- Footer -->"
 
 /***/ }),
 
@@ -489,7 +489,7 @@ var LiquidacionCIEService = /** @class */ (function () {
         this.host = host;
     }
     LiquidacionCIEService.prototype.search = function (query) {
-        var url = this.host.HOST + '/api/Cie10';
+        var url = this.host.HOST + 'Cie10';
         return this.http
             .get(url, {
             observe: 'response',
@@ -584,8 +584,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConsultasRoutingModule", function() { return ConsultasRoutingModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _liquidacion_cx_liquidacion_cx_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./liquidacion-cx/liquidacion-cx.component */ "./src/app/consultas/liquidacion-cx/liquidacion-cx.component.ts");
-/* harmony import */ var _liquidacion_cie_liquidacion_cie_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./liquidacion-cie/liquidacion-cie.component */ "./src/app/consultas/liquidacion-cie/liquidacion-cie.component.ts");
+/* harmony import */ var _liquidacion_cie_liquidacion_cie_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./liquidacion-cie/liquidacion-cie.component */ "./src/app/consultas/liquidacion-cie/liquidacion-cie.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -595,14 +594,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 var routes = [
     {
-        path: 'consultas',
-        children: [
-            { path: 'LiquidacionCx', component: _liquidacion_cx_liquidacion_cx_component__WEBPACK_IMPORTED_MODULE_2__["LiquidacionCxComponent"] },
-            { path: 'LiquidacionCIE', component: _liquidacion_cie_liquidacion_cie_component__WEBPACK_IMPORTED_MODULE_3__["LiquidacionCIEComponent"] }
-        ]
+        path: '', component: _liquidacion_cie_liquidacion_cie_component__WEBPACK_IMPORTED_MODULE_2__["LiquidacionCIEComponent"],
     }
 ];
 var ConsultasRoutingModule = /** @class */ (function () {
@@ -1103,7 +1097,7 @@ var AppSettings = /** @class */ (function () {
         this.Autor = 'Jhon Tovar';
         this.Date = 'Diciembre 2018';
         //public HOST = 'https://xhygnusnews.com'; 
-        this.HOST = 'https://apiblog.azurewebsites.net/';
+        this.HOST = 'http://apimedical-env.bdsajwt7b4.us-east-2.elasticbeanstalk.com/api/';
     }
     AppSettings = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({

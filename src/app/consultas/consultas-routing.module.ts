@@ -5,11 +5,8 @@ import { LiquidacionCIEComponent } from './liquidacion-cie/liquidacion-cie.compo
 
 const routes: Routes = [
   {
-    path: 'consultas',
-    children: [
-      { path: 'LiquidacionCx', component: LiquidacionCxComponent },
-      { path: 'LiquidacionCIE', component: LiquidacionCIEComponent }      
-    ]
+    path: '', component: LiquidacionCIEComponent,
+   
   }
 ];
 
