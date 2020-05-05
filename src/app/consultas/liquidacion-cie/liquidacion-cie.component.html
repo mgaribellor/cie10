@@ -76,6 +76,18 @@
         </ng-container>
 
 
+        <ng-container matColumnDef="eliminar">
+          <mat-header-cell *matHeaderCellDef>eliminar</mat-header-cell>
+          <mat-cell *matCellDef="let row">   <button mat-icon-button color="warn" (click)=onDelete(row.cod)><mat-icon>delete_outline</mat-icon></button>  </mat-cell>
+          
+        </ng-container>
+    <!--     <ng-container matColumnDef="eliminar">
+            <mat-cell *matCellDef="let row">
+            
+            </mat-cell>
+
+        </ng-container> -->
+
         <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>

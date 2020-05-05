@@ -64,7 +64,7 @@ export declare class ComponentLoader<T> {
     dispose(): void;
     listen(listenOpts: ListenOptions): ComponentLoader<T>;
     getInnerComponent(): ComponentRef<T>;
-    private _subscribePositioning();
-    private _unsubscribePositioning();
-    private _getContentRef(content);
+    private _subscribePositioning;
+    private _unsubscribePositioning;
+    private _getContentRef;
 }
