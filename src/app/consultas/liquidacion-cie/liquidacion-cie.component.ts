@@ -73,7 +73,7 @@ export class LiquidacionCIEComponent implements OnInit {
   }
 
   onDelete(id) {
-    debugger;
+    
     var existe = false;
 
     if (this.dataSource) {
